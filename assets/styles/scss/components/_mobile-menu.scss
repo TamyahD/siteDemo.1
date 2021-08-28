@@ -1,0 +1,19 @@
+// @use '../variables' as c;
+// // @mixin easeOut {
+// //     transition: all .3s ease-out;
+// // }
+// @use '../components/footer';
+
+
+
+// #line1, #line3 {
+//     transition: .3s ease-in-out;
+//     // transition: 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+// }
+// // MAYBE READJUST TO GET LINES DIRECTLY TO MIDDLE
+// .hmbgr-menu:hover #line1 {
+//     transform: translateX(23.75px);
+// }
+// .hmbgr-menu:hover #line3 {
+//     transform: translateX(-24px);
+// }
