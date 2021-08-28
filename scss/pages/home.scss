@@ -3,9 +3,10 @@
 
 // set background image
 @mixin background {
-    @if (c.$bg-img) {
+    @if (true) {
         &#bg-img {
-            background: c.$bg-img;
+            // background: c.$bg-img;
+            background: url('/images/background.jpg');
             background-attachment: fixed;
             background-size: cover;
 
