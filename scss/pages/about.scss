@@ -87,21 +87,20 @@
 
             h1 {
                 font-size: 6.25vh;
-                // text-decoration: underline;
             }
             p {
                 font-size: 2.75vh;
             }
         }
         .ab-description {
-            min-width: 500px;
-            max-width: 800px;
-            // background-color: khaki;
-            padding: 0 5vh;
+            min-width: 65%;
+            max-width: 90%;
+            width: 100%;
+            // background-color: lightseagreen;
+            padding: 0 3vh;
             p {
                 text-align: center;
-                // color: green;
-                font-size: 4vh;
+                font-size: 3vh;
                 line-height: 105%;
             }
         }
