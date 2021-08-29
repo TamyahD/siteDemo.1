@@ -293,10 +293,14 @@ body .subscribe-content .sub-input-box {
   text-align: left;
 }
 .about-container .ab-description {
-  padding: 1vh 1vh;
+  margin: 0 0.5vh;
   line-height: 2.75vh;
-  color: #BBBBBB;
-  font-size: 2.5vh;
+  color: #F0EEEF;
+  font-size: 3vh;
+  line-height: 110%;
+  min-width: 65%;
+  max-width: 95%;
+  width: 100%;
 }
 
 .team-content {
@@ -342,7 +346,7 @@ body .subscribe-content .sub-input-box {
   font-size: 3vh;
 }
 
-@media (min-width: 770px) and (min-height: 650px) {
+@media (min-width: 770px) and (min-height: 625px) {
   .about-container .heading h1 {
     font-size: 6.25vh;
   }
@@ -356,7 +360,6 @@ body .subscribe-content .sub-input-box {
   }
   .about-container .ab-description p {
     text-align: center;
-    color: green;
     font-size: 4vh;
     line-height: 105%;
   }

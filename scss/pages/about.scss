@@ -24,10 +24,15 @@
         }
     }
     .ab-description {
-        padding: 1vh 1vh;
+        margin: 0 .5vh;
         line-height: 2.75vh;
-        color: c.$ltgray;
-        font-size: 2.5vh;
+        color: c.$white;
+        font-size: 3vh;
+        line-height: 110%;
+        // background-color: lightcoral;
+        min-width: 65%;
+        max-width: 95%;
+        width: 100%;
     }
 }
 .team-content {
@@ -76,7 +81,7 @@
     }
 }
 // larger about description text for larger screens
-@media (min-width: 770px) and (min-height: 650px) {
+@media (min-width: 770px) and (min-height: 625px) {
     .about-container {
         .heading {
 
@@ -95,7 +100,7 @@
             padding: 0 5vh;
             p {
                 text-align: center;
-                color: green;
+                // color: green;
                 font-size: 4vh;
                 line-height: 105%;
             }
