@@ -325,19 +325,19 @@ body .subscribe-content .sub-input-box {
   align-items: flex-start;
   width: 80%;
 }
-.team-content .team-members .member1, .team-content .team-members .member2, .team-content .team-members .member3 {
+.team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.team-content .team-members .member1 .picture-icon, .team-content .team-members .member2 .picture-icon, .team-content .team-members .member3 .picture-icon {
+.team-content .team-members #member1 .picture-icon, .team-content .team-members #member2 .picture-icon, .team-content .team-members #member3 .picture-icon {
   height: 10vh;
   width: 12vh;
   border-radius: 4.5vh;
   margin: 2vh 1.5vh;
   background-color: #BBBBBB;
 }
-.team-content .team-members .member1 .member-name, .team-content .team-members .member2 .member-name, .team-content .team-members .member3 .member-name {
+.team-content .team-members #member1 .member-name, .team-content .team-members #member2 .member-name, .team-content .team-members #member3 .member-name {
   padding: 1vh 1.75vh;
   border-radius: 1vh;
   cursor: pointer;
@@ -365,8 +365,32 @@ body .subscribe-content .sub-input-box {
     line-height: 105%;
   }
 }
-/* MEDIA QUERY TO TARGET ASPECT RATIO; FOR KINDLE
- FIRE HDX-LIKE DEVICES */
+@media (min-width: 900px) and (min-height: 600px), (orientation: landscape) {
+  .team-content {
+    background-color: #636363;
+  }
+  .team-content .team-members {
+    background-color: #346EB8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95%;
+    min-width: 65%;
+    width: 100%;
+    min-height: 50vh;
+    max-height: 60vh;
+  }
+  .team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
+    display: flex;
+    flex-direction: column;
+    background-color: #b87e34;
+  }
+  .team-content .team-members #member1 .member-name, .team-content .team-members #member2 .member-name, .team-content .team-members #member3 .member-name {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
