@@ -342,6 +342,25 @@ body .subscribe-content .sub-input-box {
   font-size: 3vh;
 }
 
+@media (min-width: 770px) and (min-height: 650px) {
+  .about-container .heading h1 {
+    font-size: 6.25vh;
+  }
+  .about-container .heading p {
+    font-size: 2.75vh;
+  }
+  .about-container .ab-description {
+    min-width: 500px;
+    max-width: 800px;
+    padding: 0 5vh;
+  }
+  .about-container .ab-description p {
+    text-align: center;
+    color: green;
+    font-size: 4vh;
+    line-height: 105%;
+  }
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
