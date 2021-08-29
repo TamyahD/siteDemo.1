@@ -269,6 +269,8 @@ body .subscribe-content .sub-input-box {
   color: #969696;
 }
 
+/* MEDIA QUERY TO TARGET ASPECT RATIO; FOR KINDLE
+ FIRE HDX-LIKE DEVICES */
 .about-container {
   display: flex;
   flex-direction: column;
@@ -363,6 +365,8 @@ body .subscribe-content .sub-input-box {
     line-height: 105%;
   }
 }
+/* MEDIA QUERY TO TARGET ASPECT RATIO; FOR KINDLE
+ FIRE HDX-LIKE DEVICES */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
