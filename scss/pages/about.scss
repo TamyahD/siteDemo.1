@@ -105,34 +105,33 @@
 
     }
 }
-@media (min-width: 900px) and (min-height: 600px),
-    (orientation: landscape) {
-        .team-content { //content container
-            background-color: c.$drkgray;
+@media (min-width: 900px) and (min-height: 600px),(orientation: landscape) {
+    .team-content { //content container
+        background-color: c.$drkgray;
 
-            .team-members { //members container
-                background-color: c.$blue;
+        .team-members { //members container
+            background-color: c.$blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 95%;
+            min-width: 65%;
+            width: 100%;
+            min-height: 50vh;
+            max-height: 60vh;
+
+            // individual member container
+            #member1, #member2, #member3 {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                max-width: 95%;
-                min-width: 65%;
-                width: 100%;
-                min-height: 50vh;
-                max-height: 60vh;
+                flex-direction: column;
+                background-color: complement($color: c.$blue);
 
-                // individual member container
-                #member1, #member2, #member3 {
-                    display: flex;
-                    flex-direction: column;
-                    background-color: complement($color: c.$blue);
-
-                    .member-name {
-                        margin-top: 0;
-                        padding-top: 0;
-                    }
+                .member-name {
+                    margin-top: 0;
+                    padding-top: 0;
                 }
             }
         }
     }
+}
