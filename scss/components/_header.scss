@@ -18,7 +18,7 @@
         max-height: 9vh;
         text-decoration: none;
         .md-heading {
-            font-size: 7vh;
+            font-size: 55px;
             font-variant: small-caps;
         }
         .logo-icon {
@@ -28,7 +28,6 @@
     .nav-container {
         flex-wrap: wrap;
         font-size: 25px;
-        // background-color: darkgoldenrod;
         max-height: 80px;
         min-width: 310px;
         max-width: 525px;
@@ -37,7 +36,7 @@
 
         .nav-menu {
             list-style: none;
-            padding: 0 0; //remove list indent
+            padding: 0 0; //removes list indent
             max-height: 65px;
             min-height: 30px;
             // background-color: darkred;
@@ -68,7 +67,7 @@
     .header {
         // smaller logo text size
         & .logo>.md-heading {
-            font-size: 4.75vh;
+            font-size:5vh;
         }
         // nav container disapears to display mobile menu
         .nav-container {
@@ -159,22 +158,5 @@
     .hmbgr-menu.show {
         position: absolute;
 
-    }
-}
-
-// smaller header logo text for larger screens
-@media (min-width:771px) and (min-height: 800px) {
-    .header {
-        .logo .md-heading {
-            font-size: 5vh;
-            flex-shrink: 1;
-        }
-
-        // .nav-container .nav-menu {
-        //     min-width: 400px;
-        //     font-size: 3vh;
-        //     display: flex;
-        //     justify-content: space-around;
-        // }
     }
 }
