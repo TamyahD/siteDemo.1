@@ -54,7 +54,7 @@
         padding: 2vh 0;
         align-items: flex-start;
         width: 80%;
-        .member1, .member2, .member3 {
+        #member1, #member2, #member3 {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -105,5 +105,4 @@
 
     }
 }
-/* MEDIA QUERY TO TARGET ASPECT RATIO; FOR KINDLE
- FIRE HDX-LIKE DEVICES */
+
