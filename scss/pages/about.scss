@@ -75,3 +75,31 @@
         }
     }
 }
+// larger about description text for larger screens
+@media (min-width: 770px) and (min-height: 650px) {
+    .about-container {
+        .heading {
+
+            h1 {
+                font-size: 6.25vh;
+                // text-decoration: underline;
+            }
+            p {
+                font-size: 2.75vh;
+            }
+        }
+        .ab-description {
+            min-width: 500px;
+            max-width: 800px;
+            // background-color: khaki;
+            padding: 0 5vh;
+            p {
+                text-align: center;
+                color: green;
+                font-size: 4vh;
+                line-height: 105%;
+            }
+        }
+
+    }
+}
