@@ -1,5 +1,7 @@
 @use '../globals/colors' as c;
 @use '../globals/variables' as v;
+@use '../globals/mixins' as mx;
+// APPLY MIXINS
 
 .about-container {
     display: flex;
