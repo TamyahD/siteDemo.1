@@ -114,7 +114,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             max-width: 95%;
             min-width: 65%;
             width: 100%;
@@ -125,7 +125,8 @@
             #member1, #member2, #member3 {
                 display: flex;
                 flex-direction: column;
-                background-color: complement($color: c.$blue);
+                justify-content: flex-start;
+                background-color: c.$red;
 
                 .member-name {
                     margin-top: 0;

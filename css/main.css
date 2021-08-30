@@ -18,7 +18,7 @@
   text-decoration: none;
 }
 .header .logo .md-heading {
-  font-size: 55px;
+  font-size: 50px;
   font-variant: small-caps;
 }
 .header .logo .logo-icon {
@@ -56,7 +56,7 @@
 
 @media (max-width: 770px) {
   .header .logo > .md-heading {
-    font-size: 5vh;
+    font-size: 4.5vh;
   }
   .header .nav-container {
     display: none;
@@ -368,7 +368,7 @@ body .subscribe-content .sub-input-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 95%;
     min-width: 65%;
     width: 100%;
@@ -378,7 +378,8 @@ body .subscribe-content .sub-input-box {
   .team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
     display: flex;
     flex-direction: column;
-    background-color: #b87e34;
+    justify-content: flex-start;
+    background-color: #CF1919;
   }
   .team-content .team-members #member1 .member-name, .team-content .team-members #member2 .member-name, .team-content .team-members #member3 .member-name {
     margin-top: 0;
