@@ -1,1 +1,16 @@
 // MIXINS HERE
+
+@mixin lg-heading {
+    font-size: 75px;
+}
+@mixin md-heading {
+    font-size: 60px;
+}
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
