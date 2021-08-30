@@ -1,6 +1,5 @@
 @use './components/header';
 @use './components/footer';
-@use './components/mobile-menu';
 @use './pages/home';
 @use './pages/about';
-@use './normalize';
+@use './globals/normalize';
