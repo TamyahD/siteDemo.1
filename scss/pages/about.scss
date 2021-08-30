@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lighten($color: c.$black, $amount: 20);
+    background-color: lighten($color: c.$black, $amount: 10);
     margin-top: 7vh;
     margin-bottom: 3vh;
 
@@ -54,6 +54,7 @@
         padding: 2vh 0;
         align-items: flex-start;
         width: 80%;
+        background-color: darkkhaki;
         #member1, #member2, #member3 {
             display: flex;
             flex-direction: row;
@@ -63,7 +64,7 @@
                 width: 12vh;
                 border-radius: 4.5vh;
                 margin: 2vh 1.5vh;
-                background-color: c.$ltgray;
+                background-color: lighten($color: c.$ltgray, $amount: 10);
             }
 
             .member-name {
@@ -74,6 +75,13 @@
                 display: flex;
                 color: c.$white;
                 font-size: 3.75vh;
+            }
+            // description placement hidden behind name
+            // when clicked, slide animation
+            // reveals description
+            .member-description {
+                z-index: -1;
+                display: none;
             }
         }
     }

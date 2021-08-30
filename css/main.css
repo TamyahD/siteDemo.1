@@ -303,7 +303,7 @@ body .subscribe-content .sub-input-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #3c3c3c;
+  background-color: #232323;
   margin-top: 7vh;
   margin-bottom: 3vh;
 }
@@ -318,6 +318,7 @@ body .subscribe-content .sub-input-box {
   padding: 2vh 0;
   align-items: flex-start;
   width: 80%;
+  background-color: darkkhaki;
 }
 .team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
   display: flex;
@@ -329,7 +330,7 @@ body .subscribe-content .sub-input-box {
   width: 12vh;
   border-radius: 4.5vh;
   margin: 2vh 1.5vh;
-  background-color: #BBBBBB;
+  background-color: #d5d5d5;
 }
 .team-content .team-members #member1 .member-name, .team-content .team-members #member2 .member-name, .team-content .team-members #member3 .member-name {
   padding: 1vh 1.75vh;
@@ -338,6 +339,10 @@ body .subscribe-content .sub-input-box {
   display: flex;
   color: #F0EEEF;
   font-size: 3.75vh;
+}
+.team-content .team-members #member1 .member-description, .team-content .team-members #member2 .member-description, .team-content .team-members #member3 .member-description {
+  z-index: -1;
+  display: none;
 }
 
 @media (min-width: 770px) and (min-height: 625px) {
