@@ -1,4 +1,4 @@
-@use '../globals/variables' as c;
+@use '../globals/colors' as c;
 
 @mixin easeOut {
     transition: all .3s ease-out;

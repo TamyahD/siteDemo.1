@@ -1,11 +1,13 @@
-@use '../globals/variables' as c;
+@use '../globals/colors' as c;
+@use '../globals/variables' as v;
+
 
 
 // set background image
 @mixin background {
-    @if (c.$bg-img) {
+    @if (v.$bg-img) {
         &#bg-img {
-            background: c.$bg-img;
+            background: v.$bg-img;
             background-attachment: fixed;
             background-size: cover;
 
@@ -89,7 +91,7 @@ body {
             padding: 12px 25px;
             margin: 10vh 0;
             border: none;
-            border-radius: c.$border-r;
+            border-radius: v.$border-r;
 
             a {
                 color: c.$black;
