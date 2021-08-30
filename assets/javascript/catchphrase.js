@@ -2,7 +2,6 @@
 const phraseElements = document.querySelectorAll(".phraseIcon");
 const ch = "<span>CodeHearted</span>";
 
-
 const icon = document.querySelector('h3');
 // create array with catchphrases
 const catchphrases = ["Live It - ", " Online & in Real Life", "Don't You Love Being "];
@@ -26,7 +25,7 @@ phraseElements.forEach((el) => {
 
             // changes non-selected
             // icons to default styles
-            // SHOULD BE REVISED FOR BETTER TECHNIQUE
+            // COULD BE REVISED FOR BETTER TECHNIQUE
             document.querySelector('#icon2').style.color = "lightgray";
             document.querySelector('#icon3').style.color = "lightgray";
         }
