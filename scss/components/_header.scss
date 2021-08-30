@@ -1,51 +1,97 @@
 @use '../globals/colors' as c;
+@use '../globals/variables' as v;
 
 .header {
     // entire header container
-    max-height: 75px;
     margin-bottom: 30px; //maybe change
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    min-height: 11vh;
     padding: 5px 0;
+    width: 100%;
+    background-color:rgb(51, 51, 51);
+
+    // position relative so child elements
+    // can reference for positioning
+    position: relative;
+
     .logo {
         display: flex;
         align-items: center;
         color: c.$white;
-        padding: 0 2vh;
-        max-height: 9vh;
         text-decoration: none;
-        .md-heading {
-            font-size: 50px;
-            font-variant: small-caps;
-        }
+        background-color: complement($color: rgb(75, 128, 226));
+        
+        // grow half size of available space
+        // shrinks 2x size of available space
+        // base size is 20% of container
+        // growth/shrink is off base size
+        flex: .5 2 20%;
+
+        // sets the fonts size
+        // if deleted, font size will default
+        // to normalize styles
         .logo-icon {
             font-size: 5vh;
         }
     }
+
+    // container for nav MENU
     .nav-container {
         flex-wrap: wrap;
-        font-size: 25px;
-        max-height: 80px;
-        min-width: 310px;
-        max-width: 525px;
-        margin-right: 1vh;
-        // width: 100%;
+        background-color: tomato;
+        display: flex;
 
+        // grow 1x size of space available
+        // will not shrink
+        // base size is ????
+        flex: 1 0 auto;
+
+        // smaller devices makes default nav menu
+        // disappear & mobile menu icon appears
+        @media (max-width: 575px) {
+            & {
+                display: none;
+            }
+
+            // show styles triggered when mobile menu
+            // icon displayed & clicked
+            &.show {
+                display: flex;
+                width: 100%;
+                position: absolute;
+                
+            // positioned under the entire header
+            // (100% under the parent element)
+                top: 100%;
+
+                .nav-menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+                    .nav-item {
+                        padding: 15px 0;
+                    }
+                }
+            }
+        }
+
+        // default/desktop styles of navigation
         .nav-menu {
             list-style: none;
+            margin: 3% 0;
             padding: 0 0; //removes list indent
-            max-height: 65px;
-            min-height: 30px;
-            // background-color: darkred;
-            min-width: fit-content;
-            max-width: 525px;
+            background-color: darkred;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            flex: 2 0 auto;
             & .nav-item {
-                display: inline-block;
+                display: flex;
+                margin-right: 20px;
+                flex: 0 0 auto;
+
                 a {
                     color: c.$white;
                     text-decoration: none;
@@ -53,110 +99,29 @@
             }
         }
     }
-    // default: do not display mobile menu container
-    .hmbgr-menu, .menu-line {
-        display: none;
-        position: relative;
-    }
-}
 
 
+    & .hmbgr-menu {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 2px solid black;
+        height:60px;
+        width: 60px;
+        background-color: turquoise;
 
-// when device width in 0px-770px
-@media (max-width: 770px) {    
-    .header {
-        // smaller logo text size
-        & .logo>.md-heading {
-            font-size:4.5vh;
+        .menu-line {
+            display: inline-flex;
+            background-color: black;
+            width: 70%;
+            height:3px;
         }
-        // nav container disapears to display mobile menu
-        .nav-container {
-            display: none;
-            width: 100%;
 
-            .nav-menu {
-                width: 100%;
+        @media (min-width:576px ) {
+            & {
+                display: none;
             }
         }
-        .hmbgr-menu {
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            cursor: pointer;
-            height: 70px;
-            width: 70px;
-            margin-right: 8px;
-            padding: 1vh 0;
-            right: 0%;
-
-            // menu lines 
-            // heights/widths based on parent container
-            & #line1, #line2, #line3 {
-                // position: absolute;//
-                display: flex;
-                background-color: c.$white;
-                z-index: 5;
-                height: 10%;
-            }
-            & #line1, #line3 {
-                width: 10%;   
-            }
-            & #line2 {
-                width: 80%;
-                align-self: center;
-            }
-            & #line3 {
-                align-self: flex-end;
-            }
-        }
-
-
-
-
-        // hover animation/transition
-        .hmbgr-menu:hover #line1 {
-            transform: translateX(7px);
-            // transform: translateX(30.69px);
-        }
-        .hmbgr-menu:hover #line3 {
-            transform: translateX(-7px);
-        }
-        #line1, #line3 {
-            transition: .3s ease-in-out;
-            // transition: 0.5s cubic-bezier(.68,-0.55,.27,1.55);
-        }
-        &.color {
-            background-color: c.$black;
-        }
-    }
-
-    // clicked triggered styles
-    .nav-container.show {
-        // display navigation container & menu after
-        // mobile menu clicked
-        display: flex;
-        top: 10%;
-        .nav-menu.show {
-            position: absolute;
-            flex-direction: column;
-            font-size: 3vh;
-            min-width: 100%;
-            margin: 0;
-            padding: 1vh 0;
-            background-color: c.$black;
-
-
-            li {
-                display: flex;
-                // width: 100%;
-                background-color: c.$black;
-                justify-content: center;
-                padding: 3vh 0;
-            }
-        }
-    }
-    .hmbgr-menu.show {
-        position: absolute;
-
     }
 }
