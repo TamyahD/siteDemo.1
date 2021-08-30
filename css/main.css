@@ -318,7 +318,6 @@ body .subscribe-content .sub-input-box {
   padding: 2vh 0;
   align-items: flex-start;
   width: 80%;
-  background-color: darkkhaki;
 }
 .team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
   display: flex;
