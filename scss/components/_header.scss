@@ -42,7 +42,7 @@
             // APPLY SHOW FOR PROPORTIONAL STYLES ON MOBILE
             display: flex;
             flex: 1.5 1 30%;
-            margin-left: 5px;
+            margin-left: 1vh;
             font-size: 3vh;
         }
         @media (min-width: 571px) {
@@ -135,6 +135,7 @@
         padding: 2px 0;
         margin-right: 5px;
         flex: 0 0 auto;
+        cursor: pointer;
 
         .menu-line {
             display: flex;
