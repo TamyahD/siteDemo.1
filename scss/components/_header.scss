@@ -61,7 +61,7 @@
         // grow 1x size of space available
         // will not shrink
         // base size is ????
-        flex: 1 0 auto;
+        flex: .3 0 20%;
 
         // smaller devices makes default nav menu
         // disappear & mobile menu icon appears
@@ -109,9 +109,9 @@
             justify-content: space-around;
             flex: 1.25 .5 15%;
             font-size: 2.1vh;
-            & .nav-item {
+            .nav-item {
                 display: flex;
-                margin: 0 1.5vh;
+                margin: 0 18px;
                 flex: 0 0 auto;
 
                 a {

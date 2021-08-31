@@ -46,7 +46,7 @@
 .header .nav-container {
   flex-wrap: wrap;
   display: flex;
-  flex: 1 0 auto;
+  flex: 0.3 0 20%;
 }
 @media (max-width: 570px) {
   .header .nav-container {
@@ -87,7 +87,7 @@
 }
 .header .nav-container .nav-menu .nav-item {
   display: flex;
-  margin: 0 1.5vh;
+  margin: 0 18px;
   flex: 0 0 auto;
 }
 .header .nav-container .nav-menu .nav-item a {
