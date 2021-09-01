@@ -91,15 +91,16 @@
         }
     }
 }
+// default styles
 // intergret js functionality to have description appear
 .team-content:hover #member1 {
-    animation: shorten-width 1s ease-in forwards;
+    animation: test 1s ease-in forwards;
 }
-@keyframes shorten-width {
+@keyframes test {
     100% {
-        rotate: 360deg;
+        rotate: 180deg;
         background-color: royalblue;
-        margin-right: 60%;
+        // margin-right: 60%;
     }
 }
 
