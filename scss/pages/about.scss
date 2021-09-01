@@ -50,57 +50,53 @@
         color: c.$white;
         text-align: center;
     }
-    .team-members {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 3vh;
-        padding: 2vh 0;
-        align-items: stretch;
-        width: 80%;
-        #member1, #member2, #member3 {
-            display: flex;
-            align-items: center;
-            background-color:plum ;
-            .picture-icon {
-                height: 55px;
-                width: 65px;
-                border-radius: 22px;
-                margin: 2vh 1.5vh;
-                background-color: lighten($color: c.$ltgray, $amount: 10);
-            }
 
-            .member-name {
-                // background-color: complement($color: c.$gold);
-                padding: 1vh 1.75vh;
-                border-radius: 1vh;
-                cursor: pointer;
-                display: flex;
-                color: c.$white;
-                font-size: 3.75vh;
-            }
-            // description placement hidden behind name
-            // when clicked, slide animation
-            // reveals description
-            .member-description {
-                z-index: -1;
-                display: none;
-            }
+
+    .reveal {
+        // all children are position relatively inside
+        position: relative;
+        display: inline-flex;
+        overflow: hidden; //if there is overflow/overlap it will be hidden???
+        width: 60%;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            animation: revealText 3s forwards;
+            background-color: darkcyan;
+
         }
-        #member1 {
-            transition: transform 1s ease-in;
+
+        .name {
+            opacity: 0; //default, name hidden
+            animation: animateTest .7s forwards;
+            font-size: 20px;
+            font-variant: small-caps;
         }
     }
 }
-// default styles
-// intergret js functionality to have description appear
-.team-content:hover #member1 {
-    animation: test 1s ease-in forwards;
-}
-@keyframes test {
+
+@keyframes animateTest {
     100% {
-        rotate: 180deg;
-        background-color: royalblue;
-        // margin-right: 60%;
+        opacity: 1;
+    }
+}
+@keyframes revealText {
+    0% {
+        width: 0;
+        left: 0; //begins on left side
+    }
+    50% {
+        width: 100%;
+        left: 0; //stays aligns/float left ???
+    }
+    100% {
+        width: 0;
+        left: 0;
     }
 }
 

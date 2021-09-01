@@ -317,50 +317,47 @@ body .subscribe-content .sub-input-box {
   color: #F0EEEF;
   text-align: center;
 }
-.team-content .team-members {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3vh;
-  padding: 2vh 0;
-  align-items: stretch;
-  width: 80%;
+.team-content .reveal {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  width: 60%;
 }
-.team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
-  display: flex;
-  align-items: center;
-  background-color: plum;
+.team-content .reveal:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  animation: revealText 3s forwards;
+  background-color: darkcyan;
 }
-.team-content .team-members #member1 .picture-icon, .team-content .team-members #member2 .picture-icon, .team-content .team-members #member3 .picture-icon {
-  height: 55px;
-  width: 65px;
-  border-radius: 22px;
-  margin: 2vh 1.5vh;
-  background-color: #d5d5d5;
-}
-.team-content .team-members #member1 .member-name, .team-content .team-members #member2 .member-name, .team-content .team-members #member3 .member-name {
-  padding: 1vh 1.75vh;
-  border-radius: 1vh;
-  cursor: pointer;
-  display: flex;
-  color: #F0EEEF;
-  font-size: 3.75vh;
-}
-.team-content .team-members #member1 .member-description, .team-content .team-members #member2 .member-description, .team-content .team-members #member3 .member-description {
-  z-index: -1;
-  display: none;
-}
-.team-content .team-members #member1 {
-  transition: transform 1s ease-in;
+.team-content .reveal .name {
+  opacity: 0;
+  animation: animateTest 0.7s forwards;
+  font-size: 20px;
+  font-variant: small-caps;
 }
 
-.team-content:hover #member1 {
-  animation: test 1s ease-in forwards;
-}
-
-@keyframes test {
+@keyframes animateTest {
   100% {
-    rotate: 180deg;
-    background-color: royalblue;
+    opacity: 1;
+  }
+}
+@keyframes revealText {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 0;
   }
 }
 @media (min-width: 770px) and (min-height: 625px) {
