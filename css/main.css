@@ -316,18 +316,18 @@ body .subscribe-content .sub-input-box {
   flex-direction: column;
   margin-bottom: 3vh;
   padding: 2vh 0;
-  align-items: flex-start;
+  align-items: stretch;
   width: 80%;
 }
 .team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  background-color: plum;
 }
 .team-content .team-members #member1 .picture-icon, .team-content .team-members #member2 .picture-icon, .team-content .team-members #member3 .picture-icon {
-  height: 10vh;
-  width: 12vh;
-  border-radius: 4.5vh;
+  height: 55px;
+  width: 65px;
+  border-radius: 22px;
   margin: 2vh 1.5vh;
   background-color: #d5d5d5;
 }
@@ -343,7 +343,21 @@ body .subscribe-content .sub-input-box {
   z-index: -1;
   display: none;
 }
+.team-content .team-members #member1 {
+  transition: transform 1s ease-in;
+}
 
+.team-content:hover #member1 {
+  animation: shorten-width 1s ease-in forwards;
+}
+
+@keyframes shorten-width {
+  100% {
+    rotate: 360deg;
+    background-color: royalblue;
+    margin-right: 60%;
+  }
+}
 @media (min-width: 770px) and (min-height: 625px) {
   .about-container .heading h1 {
     font-size: 6.25vh;
