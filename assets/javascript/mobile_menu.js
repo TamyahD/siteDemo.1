@@ -1,17 +1,12 @@
 // select DOM items
 const menuContainer = document.querySelector('div.hmbgr-menu');
-const navMenu = document.querySelector('.nav-menu');
-const navItems = document.querySelectorAll('.nav-item');
-const header = document.querySelector('header');
 const navContainer = document.querySelector('.nav-container');
+const header = document.querySelector('.header');
 
 menuContainer.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
     navContainer.classList.toggle('show');
-    navMenu.classList.toggle('show');
-    menuContainer.classList.toggle('show');
-    header.classList.toggle('color');
-
+    header.classList.toggle('show');
 
 }
