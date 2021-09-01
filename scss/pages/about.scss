@@ -51,55 +51,84 @@
         text-align: center;
     }
 
-
-    .reveal {
-        // all children are position relatively inside
+    .member {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        background-color: mediumseagreen;
+        width: 80%;
+        height: 150px;
         position: relative;
-        display: inline-flex;
-        overflow: hidden; //if there is overflow/overlap it will be hidden???
-        width: 60%;
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+
+
+        .img-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: palevioletred;
+            margin-right: 1vh;
+            width: 25%;
             height: 100%;
-            width: 100%;
-            z-index: 1;
-            animation: revealText 3s forwards;
-            background-color: darkcyan;
-
+            position: relative;
+            .img {
+                width: 95%;
+                height: 50px;
+                background-color: mediumslateblue;
+                border-radius: v.$border-r;
+            }
         }
-
         .name {
-            opacity: 0; //default, name hidden
-            animation: animateTest .7s forwards;
-            font-size: 20px;
-            font-variant: small-caps;
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            background-color: navajowhite;
+            cursor: pointer;
+            height: 90%;
+            width: 100%;
+            position: relative;
+            &:hover {
+                animation: changeColor 1s forwards;
+            }
+        }
+        // default hidden
+        .description-wrap {
+            display: none;
+
         }
     }
-}
+    // .description-wrap {
+    //     width: 75%;
+    //     padding: 5px;
+    //     position: relative;
+    //     display: inline-flex;
 
-@keyframes animateTest {
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes revealText {
-    0% {
-        width: 0;
-        left: 0; //begins on left side
-    }
-    50% {
-        width: 100%;
-        left: 0; //stays aligns/float left ???
-    }
-    100% {
-        width: 0;
-        left: 0;
-    }
-}
+    //     &::before {
+    //         content: '';
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         background-color: mediumseagreen;
+    //         height: 100%;
+    //         animation: revealText 1s ease forwards;
+    //     }
 
+
+    //     .description {
+    //         font-size: 15px;
+    //         color: white;
+    //         margin: 0;
+    //         opacity: 0; //default hidden
+    //         animation: fadeText 1s forwards;
+    //         padding-top: 15px;
+    //     }
+    // }
+}
+@keyframes changeColor {
+    100% {
+        background-color:crimson;
+        width: 0;
+    }
+}
 
 // larger about description text for larger screens
 @media (min-width: 770px) and (min-height: 625px) {

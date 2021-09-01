@@ -317,47 +317,51 @@ body .subscribe-content .sub-input-box {
   color: #F0EEEF;
   text-align: center;
 }
-.team-content .reveal {
+.team-content .member {
+  display: flex;
+  align-items: center;
+  background-color: mediumseagreen;
+  width: 80%;
+  height: 150px;
   position: relative;
-  display: inline-flex;
-  overflow: hidden;
-  width: 60%;
 }
-.team-content .reveal:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.team-content .member .img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: palevioletred;
+  margin-right: 1vh;
+  width: 25%;
   height: 100%;
-  width: 100%;
-  z-index: 1;
-  animation: revealText 3s forwards;
-  background-color: darkcyan;
+  position: relative;
 }
-.team-content .reveal .name {
-  opacity: 0;
-  animation: animateTest 0.7s forwards;
-  font-size: 20px;
-  font-variant: small-caps;
+.team-content .member .img-wrap .img {
+  width: 95%;
+  height: 50px;
+  background-color: mediumslateblue;
+  border-radius: 9px;
+}
+.team-content .member .name {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  background-color: navajowhite;
+  cursor: pointer;
+  height: 90%;
+  width: 100%;
+  position: relative;
+}
+.team-content .member .name:hover {
+  animation: changeColor 1s forwards;
+}
+.team-content .member .description-wrap {
+  display: none;
 }
 
-@keyframes animateTest {
+@keyframes changeColor {
   100% {
-    opacity: 1;
-  }
-}
-@keyframes revealText {
-  0% {
+    background-color: crimson;
     width: 0;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 0;
   }
 }
 @media (min-width: 770px) and (min-height: 625px) {
