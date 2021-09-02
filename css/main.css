@@ -327,11 +327,12 @@ body .subscribe-content .sub-input-box {
 }
 .team-content .member .img-wrap {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   background-color: palevioletred;
   margin-right: 1vh;
-  width: 25%;
+  width: 65px;
   height: 100%;
   position: relative;
 }
@@ -345,23 +346,60 @@ body .subscribe-content .sub-input-box {
   display: flex;
   align-items: center;
   font-size: 25px;
-  background-color: navajowhite;
+  background-color: darkgrey;
   cursor: pointer;
   height: 90%;
+  max-width: inherit;
   width: 100%;
-  position: relative;
+  position: sticky;
+  white-space: nowrap;
 }
-.team-content .member .name:hover {
-  animation: changeColor 1s forwards;
+.team-content .member .name.disappear {
+  animation: disappear 1s ease forwards;
+}
+.team-content .member .name.reveal {
+  animation: disappear 1s ease backwards;
 }
 .team-content .member .description-wrap {
-  display: none;
+  width: 0%;
+}
+.team-content .member .description-wrap.reveal {
+  animation: showDescription 3s ease forwards;
+}
+.team-content .member .description-wrap .description {
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
 }
 
-@keyframes changeColor {
+@keyframes disappear {
   100% {
-    background-color: crimson;
     width: 0;
+    color: rgba(0, 0, 0, 0);
+    left: 0;
+  }
+}
+@keyframes showDescription {
+  0% {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+    width: 75%;
+    height: 100%;
+  }
+  100% {
+    opacity: 1;
+    width: 75%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    right: 0;
   }
 }
 @media (min-width: 770px) and (min-height: 625px) {

@@ -63,11 +63,12 @@
 
         .img-wrap {
             display: flex;
+            flex: 0 0 auto;
             align-items: center;
             justify-content: center;
             background-color: palevioletred;
             margin-right: 1vh;
-            width: 25%;
+            width: 65px;
             height: 100%;
             position: relative;
             .img {
@@ -81,52 +82,71 @@
             display: flex;
             align-items: center;
             font-size: 25px;
-            background-color: navajowhite;
+            background-color:darkgrey;
             cursor: pointer;
             height: 90%;
+            max-width:inherit;
             width: 100%;
-            position: relative;
-            &:hover {
-                animation: changeColor 1s forwards;
+            position: sticky;
+            white-space: nowrap;
+            // if hovered, animation triggers
+            // &:hover {
+            //     animation: changeColor 1s forwards;
+            // }
+
+            &.disappear {
+                animation: disappear 1s ease forwards;
+            }
+            &.reveal {
+                animation: disappear 1s ease backwards;
             }
         }
         // default hidden
         .description-wrap {
-            display: none;
+            width: 0%;
+
+            &.reveal {
+                animation: showDescription 3s ease forwards;
+            }
+
+            .description {
+                text-align: center;
+                margin: 0;
+                overflow: hidden;
+            }
 
         }
     }
-    // .description-wrap {
-    //     width: 75%;
-    //     padding: 5px;
-    //     position: relative;
-    //     display: inline-flex;
-
-    //     &::before {
-    //         content: '';
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         background-color: mediumseagreen;
-    //         height: 100%;
-    //         animation: revealText 1s ease forwards;
-    //     }
-
-
-    //     .description {
-    //         font-size: 15px;
-    //         color: white;
-    //         margin: 0;
-    //         opacity: 0; //default hidden
-    //         animation: fadeText 1s forwards;
-    //         padding-top: 15px;
-    //     }
-    // }
 }
-@keyframes changeColor {
+@keyframes disappear {
     100% {
-        background-color:crimson;
         width: 0;
+        color: rgba(0, 0, 0, 0);
+        left: 0;
+        // opacity: 0;
+    }
+}
+@keyframes showDescription {
+    0% {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+        width: 75%;
+        height: 100%;
+    }
+    100% {
+        opacity: 1;
+        width: 75%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        right: 0;        // display: inline;
     }
 }
 
