@@ -354,14 +354,13 @@ body .subscribe-content .sub-input-box {
 }
 
 .team-content:hover #member1 {
-  animation: shorten-width 1s ease-in forwards;
+  animation: test 1s ease-in forwards;
 }
 
-@keyframes shorten-width {
+@keyframes test {
   100% {
-    rotate: 360deg;
+    rotate: 180deg;
     background-color: royalblue;
-    margin-right: 60%;
   }
 }
 @media (min-width: 770px) and (min-height: 625px) {
