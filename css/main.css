@@ -320,17 +320,18 @@ body .subscribe-content .sub-input-box {
 .team-content .member {
   display: flex;
   align-items: center;
-  background-color: mediumseagreen;
+  background-color: #c6b039;
   width: 80%;
   height: 150px;
   position: relative;
+  margin-bottom: 20px;
 }
 .team-content .member .img-wrap {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  background-color: palevioletred;
+  background-color: #BBBBBB;
   margin-right: 1vh;
   width: 65px;
   height: 100%;
@@ -338,38 +339,44 @@ body .subscribe-content .sub-input-box {
 }
 .team-content .member .img-wrap .img {
   width: 95%;
-  height: 50px;
-  background-color: mediumslateblue;
+  height: 55px;
+  background-color: #346EB8;
   border-radius: 9px;
+  cursor: pointer;
 }
 .team-content .member .name {
   display: flex;
   align-items: center;
   font-size: 25px;
-  background-color: darkgrey;
-  cursor: pointer;
+  background-color: #a14747;
   height: 90%;
   max-width: inherit;
   width: 100%;
   position: sticky;
   white-space: nowrap;
+  animation: fadeIn 1s ease;
 }
-.team-content .member .name.disappear {
+.team-content .member #name1.disappear, .team-content .member #name2.disappear, .team-content .member #name3.disappear {
   animation: disappear 1s ease forwards;
 }
-.team-content .member .name.reveal {
+.team-content .member #name1.reveal, .team-content .member #name2.reveal, .team-content .member #name3.reveal {
   animation: disappear 1s ease backwards;
 }
 .team-content .member .description-wrap {
   width: 0%;
-}
-.team-content .member .description-wrap.reveal {
-  animation: showDescription 3s ease forwards;
+  display: flex;
+  align-items: center;
 }
 .team-content .member .description-wrap .description {
   text-align: center;
   margin: 0;
   overflow: hidden;
+}
+.team-content .member #dw1.show, .team-content .member #dw2.show, .team-content .member #dw3.show {
+  animation: showDescription 2.25s ease forwards;
+}
+.team-content .member #dw1.hide, .team-content .member #dw2.hide, .team-content .member #dw3.hide {
+  animation: showDescription 2s ease backwards;
 }
 
 @keyframes disappear {
@@ -400,6 +407,14 @@ body .subscribe-content .sub-input-box {
     top: 0;
     position: absolute;
     right: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media (min-width: 770px) and (min-height: 625px) {

@@ -55,45 +55,44 @@
         display: flex;
         align-items: center;
         // justify-content: center;
-        background-color: mediumseagreen;
+        background-color: desaturate($color: c.$gold, $amount: 45);
         width: 80%;
         height: 150px;
         position: relative;
-
+        margin-bottom: 20px;
 
         .img-wrap {
             display: flex;
             flex: 0 0 auto;
             align-items: center;
             justify-content: center;
-            background-color: palevioletred;
+            background-color: c.$ltgray;
             margin-right: 1vh;
             width: 65px;
             height: 100%;
             position: relative;
             .img {
                 width: 95%;
-                height: 50px;
-                background-color: mediumslateblue;
+                height: 55px;
+                background-color: c.$blue;
                 border-radius: v.$border-r;
+                cursor: pointer;
             }
         }
         .name {
             display: flex;
             align-items: center;
             font-size: 25px;
-            background-color:darkgrey;
-            cursor: pointer;
+            background-color:desaturate($color: c.$red, $amount: 40);
+            // cursor: pointer;
             height: 90%;
             max-width:inherit;
             width: 100%;
             position: sticky;
             white-space: nowrap;
-            // if hovered, animation triggers
-            // &:hover {
-            //     animation: changeColor 1s forwards;
-            // }
-
+            animation: fadeIn 1s ease;
+        }
+        #name1, #name2, #name3 {
             &.disappear {
                 animation: disappear 1s ease forwards;
             }
@@ -101,20 +100,25 @@
                 animation: disappear 1s ease backwards;
             }
         }
-        // default hidden
+        // default hidden, vertically aligned center
         .description-wrap {
             width: 0%;
-
-            &.reveal {
-                animation: showDescription 3s ease forwards;
-            }
-
+            display: flex;
+            align-items: center;
             .description {
                 text-align: center;
                 margin: 0;
                 overflow: hidden;
+                // background-color:c.$drkgray;
             }
-
+        }
+        #dw1, #dw2, #dw3 {
+            &.show {
+                animation: showDescription 2.25s ease forwards;
+            }
+            &.hide {
+                animation: showDescription 2s ease backwards;
+            }
         }
     }
 }
@@ -123,7 +127,6 @@
         width: 0;
         color: rgba(0, 0, 0, 0);
         left: 0;
-        // opacity: 0;
     }
 }
 @keyframes showDescription {
@@ -147,6 +150,14 @@
         top: 0;
         position: absolute;
         right: 0;        // display: inline;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
