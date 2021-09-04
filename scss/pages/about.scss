@@ -50,44 +50,127 @@
         color: c.$white;
         text-align: center;
     }
-    .team-members {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 3vh;
-        padding: 2vh 0;
-        align-items: flex-start;
-        width: 80%;
-        #member1, #member2, #member3 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            .picture-icon {
-                height: 10vh;
-                width: 12vh;
-                border-radius: 4.5vh;
-                margin: 2vh 1.5vh;
-                background-color: lighten($color: c.$ltgray, $amount: 10);
-            }
 
-            .member-name {
-                // background-color: complement($color: c.$gold);
-                padding: 1vh 1.75vh;
-                border-radius: 1vh;
-                cursor: pointer;
+    // .desktop-wrap {
+        .member {
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            background-color: desaturate($color: c.$gold, $amount: 45);
+            width: 90%;
+            height: 150px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+
+            .img-wrap {
                 display: flex;
-                color: c.$white;
-                font-size: 3.75vh;
+                flex: 0 0 25%;
+                align-items: center;
+                justify-content: center;
+                background-color: c.$ltgray;
+                margin-right: 1vh;
+                width: 65px;
+                height: 100%;
+                position: relative;
+                .img {
+                    width: 95%;
+                    height: 55px;
+                    background-color: c.$blue;
+                    border-radius: v.$border-r;
+                    cursor: pointer;
+                }
             }
-            // description placement hidden behind name
-            // when clicked, slide animation
-            // reveals description
-            .member-description {
-                z-index: -1;
-                display: none;
+            .name {
+                display: flex;
+                align-items: center;
+                font-size: 25px;
+                background-color:desaturate($color: c.$red, $amount: 40);
+                // cursor: pointer;
+                height: 90%;
+                max-width:inherit;
+                width: 100%;
+                position: sticky;
+                white-space: nowrap;
+                animation: fadeIn 1s ease;
+            }
+            #name1, #name2, #name3 {
+                &.disappear {
+                    animation: disappear 1s ease forwards;
+                }
+                &.reveal {
+                    animation: disappear 1s ease backwards;
+                }
+            }
+            // default hidden, vertically aligned center
+            .description-wrap {
+                width: 0%;
+                display: flex;
+                align-items: center;
+                .description {
+                    text-align: center;
+                    margin: 0;
+                    overflow: hidden;
+                    height: 100%;
+                    // font-size: smaller;
+                    display: flex;
+                    align-items: center;
+                    // justify-content: center;
+                    // background-color:c.$drkgray;
+                }
+            }
+            #dw1, #dw2, #dw3 {
+                &.show {
+                    animation: showDescription 2.25s ease forwards;
+                }
+                &.hide {
+                    animation: showDescription 2s ease backwards;
+                }
             }
         }
+    // }
+
+}
+@keyframes disappear {
+    100% {
+        width: 0;
+        color: rgba(0, 0, 0, 0);
+        left: 0;
     }
 }
+@keyframes showDescription {
+    0% {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+        width: 75%;
+        height: 100%;
+    }
+    100% {
+        opacity: 1;
+        width: 75%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        right: 0;        // display: inline;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 // larger about description text for larger screens
 @media (min-width: 770px) and (min-height: 625px) {
     .about-container {
@@ -118,39 +201,97 @@
 @media (min-width: 900px) and (min-height: 600px),(orientation: landscape) {
     .team-content { //content container
         background-color: c.$drkgray;
+        // display: flex;
+        flex-direction: column;
 
-        .team-members { //members container
-            // background-color: c.$blue;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            max-width: 95%;
-            min-width: 65%;
+        h1 {
             width: 100%;
-            min-height: 50vh;
-            max-height: 60vh;
+        }
 
-            // individual member container
-            #member1, #member2, #member3 {
+        .desktop-wrap {
+            display: flex;
+            background-color: lighten($color: c.$black, $amount: 22);
+            justify-content: space-evenly;
+        
+            .member {
+                margin: 3%;
+                padding: 0;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
-                background-color: desaturate($color: c.$gold, $amount: 55);
-                max-width: 50vh;
-                max-height: 90%;
-                border-radius: v.$border-r;
+                height: 55vh;
+                background-color: c.$black;
 
-                .member-name {
-                    margin: 0;
-                   padding: 0;
+                .img-wrap {
+                    background-color:rgba(245, 222, 179, 0);
+                    width: 90%;
+                    margin-top: 1vh;
+                    padding: .75vh;
+                    // height: 20vh;
+
+                    .img {
+                        border-radius: v.$border-r;
+                        margin: 0;
+                        height: 100%;
+                        width: 60%;
+                        cursor: default;
+                    }
                 }
-                .member-description {
-                    padding: 0 8px;
-                    font-size: 3vh;
-                    text-align: center;
+                .name {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 35px;
+                    margin-top: 0;
+                    margin-bottom: 2.25vh;
+                    height: fit-content;
+                }
+                .description-wrap {
+                    display: flex;
+                    align-items: flex-start;
+                    background-color: yellow;
+                    width: 100%;
+                    height: max-content;
+                    padding: 5%;
+                    margin: 0;
                 }
             }
         }
+
+        // .member .img-wrap .img {
+        //     height: max-content;
+        // }
+
+        // .team-members { //members container
+        //     // background-color: c.$blue;
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-between;
+        //     align-items: flex-start;
+        //     max-width: 95%;
+        //     min-width: 65%;
+        //     width: 100%;
+        //     min-height: 50vh;
+        //     max-height: 60vh;
+
+        //     // individual member container
+        //     #member1, #member2, #member3 {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: flex-start;
+        //         background-color: desaturate($color: c.$gold, $amount: 55);
+        //         max-width: 50vh;
+        //         max-height: 90%;
+        //         border-radius: v.$border-r;
+
+        //         .member-name {
+        //             margin: 0;
+        //            padding: 0;
+        //         }
+        //         .member-description {
+        //             padding: 0 8px;
+        //             font-size: 3vh;
+        //             text-align: center;
+        //         }
+        //     }
+        // }
     }
 }
