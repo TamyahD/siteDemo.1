@@ -321,14 +321,16 @@ body .subscribe-content .sub-input-box {
   display: flex;
   align-items: center;
   background-color: #c6b039;
-  width: 80%;
+  width: 90%;
   height: 150px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
 }
 .team-content .member .img-wrap {
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 0 25%;
   align-items: center;
   justify-content: center;
   background-color: #BBBBBB;
@@ -371,6 +373,9 @@ body .subscribe-content .sub-input-box {
   text-align: center;
   margin: 0;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .team-content .member #dw1.show, .team-content .member #dw2.show, .team-content .member #dw3.show {
   animation: showDescription 2.25s ease forwards;
@@ -439,35 +444,53 @@ body .subscribe-content .sub-input-box {
 @media (min-width: 900px) and (min-height: 600px), (orientation: landscape) {
   .team-content {
     background-color: #636363;
+    flex-direction: column;
   }
-  .team-content .team-members {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 95%;
-    min-width: 65%;
+  .team-content h1 {
     width: 100%;
-    min-height: 50vh;
-    max-height: 60vh;
   }
-  .team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
+  .team-content .desktop-wrap {
+    display: flex;
+    background-color: #414141;
+    justify-content: space-evenly;
+  }
+  .team-content .desktop-wrap .member {
+    margin: 3%;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    background-color: #b9a746;
-    max-width: 50vh;
-    max-height: 90%;
+    height: 55vh;
+    background-color: #090909;
+  }
+  .team-content .desktop-wrap .member .img-wrap {
+    background-color: rgba(245, 222, 179, 0);
+    width: 90%;
+    margin-top: 1vh;
+    padding: 0.75vh;
+  }
+  .team-content .desktop-wrap .member .img-wrap .img {
     border-radius: 9px;
-  }
-  .team-content .team-members #member1 .member-name, .team-content .team-members #member2 .member-name, .team-content .team-members #member3 .member-name {
     margin: 0;
-    padding: 0;
+    height: 100%;
+    width: 60%;
+    cursor: default;
   }
-  .team-content .team-members #member1 .member-description, .team-content .team-members #member2 .member-description, .team-content .team-members #member3 .member-description {
-    padding: 0 8px;
-    font-size: 3vh;
-    text-align: center;
+  .team-content .desktop-wrap .member .name {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 0;
+    margin-bottom: 2.25vh;
+    height: fit-content;
+  }
+  .team-content .desktop-wrap .member .description-wrap {
+    display: flex;
+    align-items: flex-start;
+    background-color: yellow;
+    width: 100%;
+    height: max-content;
+    padding: 5%;
+    margin: 0;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
