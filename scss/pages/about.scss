@@ -50,60 +50,116 @@
         color: c.$white;
         text-align: center;
     }
-    .team-members {
+
+    .member {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 3vh;
-        padding: 2vh 0;
-        align-items: stretch;
+        align-items: center;
+        // justify-content: center;
+        background-color: desaturate($color: c.$gold, $amount: 45);
         width: 80%;
-        #member1, #member2, #member3 {
+        height: 150px;
+        position: relative;
+        margin-bottom: 20px;
+
+        .img-wrap {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+            background-color: c.$ltgray;
+            margin-right: 1vh;
+            width: 65px;
+            height: 100%;
+            position: relative;
+            .img {
+                width: 95%;
+                height: 55px;
+                background-color: c.$blue;
+                border-radius: v.$border-r;
+                cursor: pointer;
+            }
+        }
+        .name {
             display: flex;
             align-items: center;
-            background-color:plum ;
-            .picture-icon {
-                height: 55px;
-                width: 65px;
-                border-radius: 22px;
-                margin: 2vh 1.5vh;
-                background-color: lighten($color: c.$ltgray, $amount: 10);
+            font-size: 25px;
+            background-color:desaturate($color: c.$red, $amount: 40);
+            // cursor: pointer;
+            height: 90%;
+            max-width:inherit;
+            width: 100%;
+            position: sticky;
+            white-space: nowrap;
+            animation: fadeIn 1s ease;
+        }
+        #name1, #name2, #name3 {
+            &.disappear {
+                animation: disappear 1s ease forwards;
             }
-
-            .member-name {
-                // background-color: complement($color: c.$gold);
-                padding: 1vh 1.75vh;
-                border-radius: 1vh;
-                cursor: pointer;
-                display: flex;
-                color: c.$white;
-                font-size: 3.75vh;
-            }
-            // description placement hidden behind name
-            // when clicked, slide animation
-            // reveals description
-            .member-description {
-                z-index: -1;
-                display: none;
+            &.reveal {
+                animation: disappear 1s ease backwards;
             }
         }
-        #member1 {
-            transition: transform 1s ease-in;
+        // default hidden, vertically aligned center
+        .description-wrap {
+            width: 0%;
+            display: flex;
+            align-items: center;
+            .description {
+                text-align: center;
+                margin: 0;
+                overflow: hidden;
+                // background-color:c.$drkgray;
+            }
+        }
+        #dw1, #dw2, #dw3 {
+            &.show {
+                animation: showDescription 2.25s ease forwards;
+            }
+            &.hide {
+                animation: showDescription 2s ease backwards;
+            }
         }
     }
 }
-// default styles
-// intergret js functionality to have description appear
-.team-content:hover #member1 {
-    animation: test 1s ease-in forwards;
-}
-@keyframes test {
+@keyframes disappear {
     100% {
-        rotate: 180deg;
-        background-color: royalblue;
-        // margin-right: 60%;
+        width: 0;
+        color: rgba(0, 0, 0, 0);
+        left: 0;
     }
 }
-
+@keyframes showDescription {
+    0% {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+        width: 75%;
+        height: 100%;
+    }
+    100% {
+        opacity: 1;
+        width: 75%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+        right: 0;        // display: inline;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 // larger about description text for larger screens
 @media (min-width: 770px) and (min-height: 625px) {

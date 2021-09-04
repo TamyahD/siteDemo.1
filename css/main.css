@@ -317,50 +317,104 @@ body .subscribe-content .sub-input-box {
   color: #F0EEEF;
   text-align: center;
 }
-.team-content .team-members {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3vh;
-  padding: 2vh 0;
-  align-items: stretch;
-  width: 80%;
-}
-.team-content .team-members #member1, .team-content .team-members #member2, .team-content .team-members #member3 {
+.team-content .member {
   display: flex;
   align-items: center;
-  background-color: plum;
+  background-color: #c6b039;
+  width: 80%;
+  height: 150px;
+  position: relative;
+  margin-bottom: 20px;
 }
-.team-content .team-members #member1 .picture-icon, .team-content .team-members #member2 .picture-icon, .team-content .team-members #member3 .picture-icon {
-  height: 55px;
-  width: 65px;
-  border-radius: 22px;
-  margin: 2vh 1.5vh;
-  background-color: #d5d5d5;
-}
-.team-content .team-members #member1 .member-name, .team-content .team-members #member2 .member-name, .team-content .team-members #member3 .member-name {
-  padding: 1vh 1.75vh;
-  border-radius: 1vh;
-  cursor: pointer;
+.team-content .member .img-wrap {
   display: flex;
-  color: #F0EEEF;
-  font-size: 3.75vh;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #BBBBBB;
+  margin-right: 1vh;
+  width: 65px;
+  height: 100%;
+  position: relative;
 }
-.team-content .team-members #member1 .member-description, .team-content .team-members #member2 .member-description, .team-content .team-members #member3 .member-description {
-  z-index: -1;
-  display: none;
+.team-content .member .img-wrap .img {
+  width: 95%;
+  height: 55px;
+  background-color: #346EB8;
+  border-radius: 9px;
+  cursor: pointer;
 }
-.team-content .team-members #member1 {
-  transition: transform 1s ease-in;
+.team-content .member .name {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  background-color: #a14747;
+  height: 90%;
+  max-width: inherit;
+  width: 100%;
+  position: sticky;
+  white-space: nowrap;
+  animation: fadeIn 1s ease;
+}
+.team-content .member #name1.disappear, .team-content .member #name2.disappear, .team-content .member #name3.disappear {
+  animation: disappear 1s ease forwards;
+}
+.team-content .member #name1.reveal, .team-content .member #name2.reveal, .team-content .member #name3.reveal {
+  animation: disappear 1s ease backwards;
+}
+.team-content .member .description-wrap {
+  width: 0%;
+  display: flex;
+  align-items: center;
+}
+.team-content .member .description-wrap .description {
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+.team-content .member #dw1.show, .team-content .member #dw2.show, .team-content .member #dw3.show {
+  animation: showDescription 2.25s ease forwards;
+}
+.team-content .member #dw1.hide, .team-content .member #dw2.hide, .team-content .member #dw3.hide {
+  animation: showDescription 2s ease backwards;
 }
 
-.team-content:hover #member1 {
-  animation: test 1s ease-in forwards;
-}
-
-@keyframes test {
+@keyframes disappear {
   100% {
-    rotate: 180deg;
-    background-color: royalblue;
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+    left: 0;
+  }
+}
+@keyframes showDescription {
+  0% {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+    width: 75%;
+    height: 100%;
+  }
+  100% {
+    opacity: 1;
+    width: 75%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media (min-width: 770px) and (min-height: 625px) {
