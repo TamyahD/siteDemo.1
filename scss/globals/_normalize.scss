@@ -1,3 +1,6 @@
+@use '../globals/variables' as v;
+@use '../globals/colors' as c;
+
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -8,9 +11,34 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+// set background image
+@mixin background {
+  @if (v.$bg-img) {
+      &#bg-img {
+          background: v.$bg-img;
+          background-attachment: fixed;
+          background-size: cover;
 
+          // create overlay effect
+          &:after {
+              content: '';
+              position: fixed;
+              top: 0;
+              right: 0;
+              size: cover;
+              width: 100vw;
+              height: 100vh;
+              z-index: -1; //higher the number, the closer element is to front
+              // overlay color
+              background: rgba($color: c.$blue, $alpha: .3);
+          }
+      }
+  }
+}
  * {
    box-sizing: border-box;
+  @include background();
+
  }
 
  html {
