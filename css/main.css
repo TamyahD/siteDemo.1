@@ -269,8 +269,6 @@ body .subscribe-content .sub-input-box {
   color: #969696;
 }
 
-/* MEDIA QUERY TO TARGET ASPECT RATIO; FOR KINDLE
- FIRE HDX-LIKE DEVICES */
 .about-container {
   display: flex;
   flex-direction: column;

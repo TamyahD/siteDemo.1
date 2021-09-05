@@ -55,7 +55,6 @@
     .member {
         display: flex;
         align-items: center;
-        // justify-content: center;
         background-color: lighten($color: c.$blue, $amount: 30);
         width: 90%;
         height: 150px;
@@ -117,8 +116,6 @@
                 font-size: 2.95vh;
                 display: flex;
                 align-items: center;
-                // justify-content: center;
-                // background-color:c.$drkgray;
             }
         }
         #dw1, #dw2, #dw3 {
@@ -211,7 +208,6 @@
             display: flex;
             background-color: darken($color: c.$blue, $amount: 30);
             justify-content: space-evenly;
-        
             .member {
                 margin: 3%;
                 padding: 0;
@@ -219,13 +215,11 @@
                 flex-direction: column;
                 height: 55vh;
                 background-color: c.$black;
-
                 .img-wrap {
                     background-color:desaturate($color: c.$blue, $amount: 40);
                     width: 90%;
                     margin: 1vh 0;
                     padding: .75vh;
-
                     .img {
                         border-radius: v.$border-r;
                         margin: 0;
@@ -253,7 +247,6 @@
                     height: max-content;
                     padding: 5%;
                     margin: 0;
-
                     .description {
                         font-size: 2.25vw;
                     }
