@@ -320,7 +320,7 @@ body .subscribe-content .sub-input-box {
 .team-content .member {
   display: flex;
   align-items: center;
-  background-color: #c6b039;
+  background-color: #a1bee4;
   width: 90%;
   height: 150px;
   position: relative;
@@ -333,7 +333,7 @@ body .subscribe-content .sub-input-box {
   flex: 0 0 25%;
   align-items: center;
   justify-content: center;
-  background-color: #BBBBBB;
+  background-color: #4a4a4a;
   margin-right: 1vh;
   width: 65px;
   height: 100%;
@@ -342,7 +342,7 @@ body .subscribe-content .sub-input-box {
 .team-content .member .img-wrap .img {
   width: 95%;
   height: 55px;
-  background-color: #346EB8;
+  background-color: #0028ff;
   border-radius: 9px;
   cursor: pointer;
 }
@@ -350,7 +350,7 @@ body .subscribe-content .sub-input-box {
   display: flex;
   align-items: center;
   font-size: 25px;
-  background-color: #a14747;
+  background-color: #f7ad4b;
   height: 90%;
   max-width: inherit;
   width: 100%;
