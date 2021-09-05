@@ -286,13 +286,14 @@ body .subscribe-content .sub-input-box {
 }
 .about-container .heading h1 {
   margin-bottom: 0.5vh;
-  font-size: 5vh;
+  font-size: 5.75vh;
+  margin-top: 0;
 }
 .about-container .heading p {
   margin-top: 0;
   font-size: 2.5vh;
   color: #ffd700;
-  text-align: left;
+  text-align: center;
 }
 .about-container .ab-description {
   margin: 0 0.5vh;
@@ -351,6 +352,7 @@ body .subscribe-content .sub-input-box {
   align-items: center;
   font-size: 25px;
   background-color: #f7ad4b;
+  cursor: pointer;
   height: 90%;
   max-width: inherit;
   width: 100%;
@@ -372,8 +374,10 @@ body .subscribe-content .sub-input-box {
 .team-content .member .description-wrap .description {
   text-align: center;
   margin: 0;
+  padding: 0;
   overflow: hidden;
   height: 100%;
+  font-size: 2.95vh;
   display: flex;
   align-items: center;
 }
@@ -443,7 +447,7 @@ body .subscribe-content .sub-input-box {
 }
 @media (min-width: 900px) and (min-height: 600px), (orientation: landscape) {
   .team-content {
-    background-color: #636363;
+    background-color: #824469;
     flex-direction: column;
   }
   .team-content h1 {
@@ -451,7 +455,7 @@ body .subscribe-content .sub-input-box {
   }
   .team-content .desktop-wrap {
     display: flex;
-    background-color: #414141;
+    background-color: #122741;
     justify-content: space-evenly;
   }
   .team-content .desktop-wrap .member {
@@ -463,9 +467,9 @@ body .subscribe-content .sub-input-box {
     background-color: #090909;
   }
   .team-content .desktop-wrap .member .img-wrap {
-    background-color: rgba(245, 222, 179, 0);
+    background-color: #637489;
     width: 90%;
-    margin-top: 1vh;
+    margin: 1vh 0;
     padding: 0.75vh;
   }
   .team-content .desktop-wrap .member .img-wrap .img {
@@ -474,6 +478,7 @@ body .subscribe-content .sub-input-box {
     height: 100%;
     width: 60%;
     cursor: default;
+    border: 2px solid #090909;
   }
   .team-content .desktop-wrap .member .name {
     display: flex;
@@ -482,15 +487,20 @@ body .subscribe-content .sub-input-box {
     margin-top: 0;
     margin-bottom: 2.25vh;
     height: fit-content;
+    cursor: default;
+    background-color: #F0EEEF;
   }
   .team-content .desktop-wrap .member .description-wrap {
     display: flex;
     align-items: flex-start;
-    background-color: yellow;
+    background-color: #ebd147;
     width: 100%;
     height: max-content;
     padding: 5%;
     margin: 0;
+  }
+  .team-content .desktop-wrap .member .description-wrap .description {
+    font-size: 2.25vw;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
