@@ -28,16 +28,12 @@
         }
     }
 }
-
-
-
 * {
     @include background();
 }
 body {
     background-color: darken($color: c.$drkgray, $amount: 20);
     min-height: 100vh;
-
     .main-content {
         @include mx.flex-column;
         align-items: center;
@@ -77,7 +73,6 @@ body {
                 font-size: 3.3vh;
                 margin-top: 3vh;
 
-
                 &#icon1 {
                     color: c.$gold;
                 }
@@ -96,6 +91,7 @@ body {
             a {
                 color: c.$black;
             }
+
         }
     }
     & main {
@@ -110,6 +106,7 @@ body {
             margin: 1vh;
             font-size: 2.25vh;
         }
+
         .sub-input-box {
             cursor: text;
             display: flex;
@@ -121,7 +118,3 @@ body {
         }
     }
 }
-/* MEDIA QUERY TO TARGET ASPECT RATIO; FOR KINDLE
- FIRE HDX-LIKE DEVICES */
-
-// MEDIA QUERIE TO PREVENT JUMPING ON SML DEVICES
