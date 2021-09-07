@@ -44,10 +44,10 @@ footer {
             border: 3px solid lighten($color: c.$black, $amount: 20);
         }
         .line-break {
-            color: c.$drkgray;
-            background-color: c.$drkgray;
+            color: c.$white;
+            background-color: c.$white;
             height: 1%;
-            width: 100%;
+            width: 100%
         }
     }
 
@@ -80,7 +80,7 @@ footer {
         & .footer-title {
             margin: 5px 0 5px 0;
             padding: 0;
-            color: c.$white;
+            // color: c.$white;
             font-size: 2.85vh;
             text-align: left;
         }
