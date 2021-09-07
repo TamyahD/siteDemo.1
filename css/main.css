@@ -147,28 +147,71 @@ footer {
   margin: 0;
 }
 footer .partner-employers {
-  background-color: #c0b8bc;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 93%;
   margin: 0;
 }
-footer .partner-employers p {
+footer .partner-employers #partner-heading {
   width: 100%;
   flex: 0 0 auto;
+  background-color: #F0EEEF;
+  padding: 2%;
+  font-size: 3vh;
+  text-align: center;
+  text-transform: capitalize;
 }
 footer .partner-employers .partner-icon {
   display: flex;
   flex-wrap: wrap;
+  flex: 1 2 15vw;
   margin: 1vh 1vh;
   width: 23vw;
   height: 10vh;
   border-radius: 30px;
-  border: 3px solid #090909;
+  border: 3px solid #3c3c3c;
 }
-footer .line-break {
-  height: 2px;
-  color: darkgreen;
+footer .partner-employers .line-break {
+  color: #636363;
+  background-color: #636363;
+  height: 1%;
+  width: 100%;
+}
+footer .square-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+}
+footer .square-container #socials-container .ig-icon, footer .square-container .twt-icon, footer .square-container .fb-icon {
+  font-size: 23px;
+  line-height: 1;
+}
+footer .square-container .col-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3px;
+  padding: 3px;
+  width: 48%;
+  outline: #090909 solid 1px;
+}
+footer .square-container .col-container .info-links {
+  font-size: 2vh;
+}
+footer .square-container .footer-title {
+  margin: 5px 0 5px 0;
+  padding: 0;
+  color: #F0EEEF;
+  font-size: 2.85vh;
+  text-align: left;
+}
+footer .square-container .footer-text {
+  color: #090909;
+  font-size: 2vh;
+  margin: 0;
 }
 
 body {
