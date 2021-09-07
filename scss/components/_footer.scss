@@ -1,4 +1,5 @@
 @use '../globals/colors' as c;
+@use '../globals/variables' as v;
 
 @mixin easeOut {
     transition: all .3s ease-out;
@@ -8,49 +9,85 @@ footer {
     background-color:desaturate($color: c.$blue, $amount: 40);
     display: flex;
     flex-direction: column;
-    color: c.$black;
     align-items: center;
-    padding-bottom: 3px;
+    color: c.$black;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    // position: relative;
-    // bottom: 0;
-    // width: 100%;
+    padding: 5px 0;
+    margin: 0;
 
-    .socialm-container {
-        text-align: center;
-        padding: 1vh 0;
-        max-height: 23vh;
+    .partner-employers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 93%; //MAKE VARIABLE FOR FOOTER WIDTH
+        margin: 0;
 
-        // title/heading
-        p {
-            margin: 8px 0;
-            font-size: 17px;
+        #partner-heading {
+            width: 100%;
+            flex: 0 0 auto; // doesn't grow or shrink
+            background-color: c.$white;
+            padding: 2%;
+            font-size: 3vh;
+            text-align: center;
+            text-transform: capitalize;
         }
 
-        .socialm-content {
-            color: lighten($color: c.$drkgray, $amount: 25);
-            text-decoration-line: none;
-                
-            // Social links/text
-            p {
-                font-size: 13.5px;
-                margin: 2px 0;
-                            
-                &:hover {
-                    color: c.$gold;
-                    @include easeOut();
-                }
-            
-                .ig-icon, .twt-icon, .fb-icon {
-                    font-size: 2.9vh;
-                }
-            }
+        .partner-icon {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 2 15vw;
+            margin: 1vh 1vh;
+            width: 23vw;
+            height: 10vh;
+            border-radius: 30px;
+            border: 3px solid lighten($color: c.$black, $amount: 20);
+        }
+        .line-break {
+            color: c.$drkgray;
+            background-color: c.$drkgray;
+            height: 1%;
+            width: 100%;
         }
     }
 
-    // copyright
-    .footer-text {
-        font-size: 2.5vh;
+    .square-container {
+        // background-color: c.$ltgray;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        position: relative;
+        #socials-container .ig-icon, .twt-icon, .fb-icon {
+            font-size: 23px;
+            line-height: 1;
+        }
+        .col-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; //maybe change text alignment left
+            margin: 3px;
+            padding: 3px;
+            width: 48%;
+            // background-color: desaturate($color: c.$blue, $amount: 15);
+            outline: c.$black solid 1px;
+
+            .info-links {
+                font-size: 2vh;
+            }
+        }
+        
+        & .footer-title {
+            margin: 5px 0 5px 0;
+            padding: 0;
+            color: c.$white;
+            font-size: 2.85vh;
+            text-align: left;
+        }
+        & .footer-text {
+            color: c.$black;
+            font-size: 2vh;
+            margin: 0;
+        }
     }
 }

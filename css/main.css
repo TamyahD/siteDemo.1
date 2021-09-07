@@ -139,38 +139,79 @@ footer {
   background-color: #637489;
   display: flex;
   flex-direction: column;
-  color: #090909;
   align-items: center;
-  padding-bottom: 3px;
+  color: #090909;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  padding: 5px 0;
+  margin: 0;
 }
-footer .socialm-container {
+footer .partner-employers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 93%;
+  margin: 0;
+}
+footer .partner-employers #partner-heading {
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #F0EEEF;
+  padding: 2%;
+  font-size: 3vh;
   text-align: center;
-  padding: 1vh 0;
-  max-height: 23vh;
+  text-transform: capitalize;
 }
-footer .socialm-container p {
-  margin: 8px 0;
-  font-size: 17px;
+footer .partner-employers .partner-icon {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 2 15vw;
+  margin: 1vh 1vh;
+  width: 23vw;
+  height: 10vh;
+  border-radius: 30px;
+  border: 3px solid #3c3c3c;
 }
-footer .socialm-container .socialm-content {
-  color: #a3a3a3;
-  text-decoration-line: none;
+footer .partner-employers .line-break {
+  color: #636363;
+  background-color: #636363;
+  height: 1%;
+  width: 100%;
 }
-footer .socialm-container .socialm-content p {
-  font-size: 13.5px;
-  margin: 2px 0;
+footer .square-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
 }
-footer .socialm-container .socialm-content p:hover {
-  color: #ffd700;
-  transition: all 0.3s ease-out;
+footer .square-container #socials-container .ig-icon, footer .square-container .twt-icon, footer .square-container .fb-icon {
+  font-size: 23px;
+  line-height: 1;
 }
-footer .socialm-container .socialm-content p .ig-icon, footer .socialm-container .socialm-content p .twt-icon, footer .socialm-container .socialm-content p .fb-icon {
-  font-size: 2.9vh;
+footer .square-container .col-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3px;
+  padding: 3px;
+  width: 48%;
+  outline: #090909 solid 1px;
 }
-footer .footer-text {
-  font-size: 2.5vh;
+footer .square-container .col-container .info-links {
+  font-size: 2vh;
+}
+footer .square-container .footer-title {
+  margin: 5px 0 5px 0;
+  padding: 0;
+  color: #F0EEEF;
+  font-size: 2.85vh;
+  text-align: left;
+}
+footer .square-container .footer-text {
+  color: #090909;
+  font-size: 2vh;
+  margin: 0;
 }
 
 body {
@@ -333,7 +374,6 @@ body .subscribe-content .sub-input-box {
   align-items: center;
   font-size: 25px;
   background-color: #f7ad4b;
-  cursor: pointer;
   height: 90%;
   max-width: inherit;
   width: 100%;
