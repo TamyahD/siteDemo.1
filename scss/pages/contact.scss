@@ -1,0 +1,67 @@
+@use '../globals/colors' as c;
+@use '../globals/variables' as v;
+
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 4% 2%;
+    color: c.$white;
+    background-color: lighten($color: c.$black, $amount: 10);
+    margin-bottom: 10%;
+
+    .heading-text {
+        h3 {
+            margin-top: 18px;
+            line-height: 5px;
+        }
+        .cta-text {
+            margin-bottom: 5vh;
+        }
+    }
+    .form {
+        margin-bottom: 30px;
+        .input-header-text {
+            margin: 0 0 1% 7%;
+        }
+        .input-container {
+            display: flex;
+            justify-content: center;
+            // background-color: c.$red;
+            
+            input {
+                width: 85%;
+                height: 50px;
+                margin-bottom: 25px;
+                border-radius: 10px;
+                
+            }
+            #message-input {
+                border-radius: 10px;
+                margin-bottom: 10%;
+            }
+        }
+
+        .button-wrap {
+            display: flex;
+            justify-content: center;
+            // margin-bottom: 15px;
+            .submit-btn {
+                border: none;
+                padding: 13px 35px;
+                border-radius: 22px;
+                background-color: lightgreen;
+                font-size: 3.1vh;
+                width: 20vh;
+                cursor: pointer;
+            }
+        }
+    }
+    .ps {
+        sub, p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
