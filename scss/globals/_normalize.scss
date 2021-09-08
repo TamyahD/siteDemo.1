@@ -26,8 +26,8 @@
               top: 0;
               right: 0;
               size: cover;
-              width: 100vw;
-              height: 100vh;
+              width: 100%;
+              height: 100%;
               z-index: -1; //higher the number, the closer element is to front
               // overlay color
               background: rgba($color: c.$blue, $alpha: .3);

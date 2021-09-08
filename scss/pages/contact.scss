@@ -5,11 +5,12 @@
 .contact-main {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 4% 2%;
+    padding: 2%;
     color: c.$white;
-    background-color: lighten($color: c.$black, $amount: 10);
+    // background-color: rgba(0, 0, 0, 0.575);
     margin-bottom: 10%;
+    width: 100%;
+
 
     .heading-text {
         h3 {
@@ -18,12 +19,49 @@
         }
         .cta-text {
             margin-bottom: 5vh;
+            font-size: 26px;
+
+            @media (min-width: 525px) {
+                font-size: 5.7vh;
+            }
         }
+
+        // contact page heading text
+        // padding L/R increases when screen width >= 400px
+        @media (min-width: 400px) {
+            padding: 0 5%;
+        }
+        @media (min-width: 570px) {
+            line-height: .3;
+        }
+
     }
     .form {
         margin-bottom: 30px;
         .input-header-text {
             margin: 0 0 1% 7%;
+            font-size: 16px;
+
+            // input field heading text
+            // font size set to 20px when screen width >= 500px
+            @media (min-width: 500px) {
+                font-size: 20px;
+            }
+            // padding L/R increases when screen width >= 500px
+            @media (min-width: 525px) {
+                padding: 0 8%;
+            }
+            @media (min-width: 570px) {
+                display: flex;
+                flex-wrap: nowrap;
+                // margin: 0 100px;
+                padding: 0 0;
+                // background-color: darkgreen;
+                position: relative;
+                bottom: 0;
+                max-width: fit-content;
+                // width: min-content;
+            }
         }
         .input-container {
             display: flex;
@@ -35,18 +73,39 @@
                 height: 50px;
                 margin-bottom: 25px;
                 border-radius: 10px;
-                
+            
+                // input fields
+                // width set to 375px when screen width >= 525px
+                @media (min-width: 525px) {
+                    display: flex;
+                    width: 375px;;
+                    // background-color: coral;
+                }
+                @media (min-width: 570px) {
+                    position: sticky;
+                }
+            
             }
             #message-input {
                 border-radius: 10px;
-                margin-bottom: 10%;
+
+                // message input field
+                // width set to 425px when screen width >= 660px
+                @media (min-width: 660px) {
+                    width: 425px;
+                    // background-color: cornflowerblue;
+                }
             }
+        }
+        #checkbox-wrap {
+            margin: 3% 0;
+            margin-left: 2%;
         }
 
         .button-wrap {
             display: flex;
             justify-content: center;
-            // margin-bottom: 15px;
+            padding-top: 30px;
             .submit-btn {
                 border: none;
                 padding: 13px 35px;
@@ -55,13 +114,25 @@
                 font-size: 3.1vh;
                 width: 20vh;
                 cursor: pointer;
+                margin-bottom: 6%;
             }
+        }
+
+        @media (min-width: 570px) {
+            max-width: 475px;
         }
     }
     .ps {
         sub, p {
             margin: 0;
             padding: 0;
+            // background-color: cyan;
         }
+    }
+
+    @media (min-width: 570px) {
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.575);
     }
 }

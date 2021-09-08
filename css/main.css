@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 4vh 0;
-  width: 100%;
+  width: 100vw;
   max-height: 70px;
   min-height: 50px;
   position: relative;
@@ -526,11 +526,10 @@ body .subscribe-content .sub-input-box {
 .contact-main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 4% 2%;
+  padding: 2%;
   color: #F0EEEF;
-  background-color: #232323;
   margin-bottom: 10%;
+  width: 100%;
 }
 .contact-main .heading-text h3 {
   margin-top: 18px;
@@ -538,12 +537,49 @@ body .subscribe-content .sub-input-box {
 }
 .contact-main .heading-text .cta-text {
   margin-bottom: 5vh;
+  font-size: 26px;
+}
+@media (min-width: 525px) {
+  .contact-main .heading-text .cta-text {
+    font-size: 5.7vh;
+  }
+}
+@media (min-width: 400px) {
+  .contact-main .heading-text {
+    padding: 0 5%;
+  }
+}
+@media (min-width: 570px) {
+  .contact-main .heading-text {
+    line-height: 0.3;
+  }
 }
 .contact-main .form {
   margin-bottom: 30px;
 }
 .contact-main .form .input-header-text {
   margin: 0 0 1% 7%;
+  font-size: 16px;
+}
+@media (min-width: 500px) {
+  .contact-main .form .input-header-text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 525px) {
+  .contact-main .form .input-header-text {
+    padding: 0 8%;
+  }
+}
+@media (min-width: 570px) {
+  .contact-main .form .input-header-text {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 0;
+    position: relative;
+    bottom: 0;
+    max-width: fit-content;
+  }
 }
 .contact-main .form .input-container {
   display: flex;
@@ -555,13 +591,33 @@ body .subscribe-content .sub-input-box {
   margin-bottom: 25px;
   border-radius: 10px;
 }
+@media (min-width: 525px) {
+  .contact-main .form .input-container input {
+    display: flex;
+    width: 375px;
+  }
+}
+@media (min-width: 570px) {
+  .contact-main .form .input-container input {
+    position: sticky;
+  }
+}
 .contact-main .form .input-container #message-input {
   border-radius: 10px;
-  margin-bottom: 10%;
+}
+@media (min-width: 660px) {
+  .contact-main .form .input-container #message-input {
+    width: 425px;
+  }
+}
+.contact-main .form #checkbox-wrap {
+  margin: 3% 0;
+  margin-left: 2%;
 }
 .contact-main .form .button-wrap {
   display: flex;
   justify-content: center;
+  padding-top: 30px;
 }
 .contact-main .form .button-wrap .submit-btn {
   border: none;
@@ -571,10 +627,23 @@ body .subscribe-content .sub-input-box {
   font-size: 3.1vh;
   width: 20vh;
   cursor: pointer;
+  margin-bottom: 6%;
+}
+@media (min-width: 570px) {
+  .contact-main .form {
+    max-width: 475px;
+  }
 }
 .contact-main .ps sub, .contact-main .ps p {
   margin: 0;
   padding: 0;
+}
+@media (min-width: 570px) {
+  .contact-main {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.575);
+  }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -598,8 +667,8 @@ body .subscribe-content .sub-input-box {
   top: 0;
   right: 0;
   size: cover;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   background: rgba(52, 110, 184, 0.3);
 }
