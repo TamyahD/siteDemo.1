@@ -5,17 +5,21 @@
 .contact-main {
     display: flex;
     flex-direction: column;
-    padding: 2%;
     color: c.$white;
-    // background-color: rgba(0, 0, 0, 0.575);
-    margin-bottom: 10%;
+    background-color: rgba(0, 0, 0, 0.575);
     width: 100%;
+    margin-bottom: 5%;
 
 
     .heading-text {
+        // background-color: orange;
+        margin-left: 3%;
         h3 {
-            margin-top: 18px;
-            line-height: 5px;
+            margin-top: 0;
+
+            @media (min-width: 525px) {
+                margin-top: 15px;
+            }
         }
         .cta-text {
             margin-bottom: 5vh;
@@ -23,10 +27,12 @@
 
             @media (min-width: 525px) {
                 font-size: 5.7vh;
+                line-height: 5.15vh;
+                margin-top: 0;
             }
         }
 
-        // contact page heading text
+        // page heading text
         // padding L/R increases when screen width >= 400px
         @media (min-width: 400px) {
             padding: 0 5%;
@@ -34,7 +40,6 @@
         @media (min-width: 570px) {
             line-height: .3;
         }
-
     }
     .form {
         margin-bottom: 30px;
@@ -54,13 +59,10 @@
             @media (min-width: 570px) {
                 display: flex;
                 flex-wrap: nowrap;
-                // margin: 0 100px;
                 padding: 0 0;
-                // background-color: darkgreen;
                 position: relative;
                 bottom: 0;
                 max-width: fit-content;
-                // width: min-content;
             }
         }
         .input-container {
@@ -98,8 +100,13 @@
             }
         }
         #checkbox-wrap {
-            margin: 3% 0;
-            margin-left: 2%;
+            margin: 3% 0 3% 2%;
+            // margin-left: 2%;
+
+            #sub-box {
+                height: 17px;
+                width: 17px;
+            }
         }
 
         .button-wrap {
@@ -114,7 +121,7 @@
                 font-size: 3.1vh;
                 width: 20vh;
                 cursor: pointer;
-                margin-bottom: 6%;
+                margin-bottom: 1%;
             }
         }
 
@@ -123,20 +130,19 @@
         }
     }
     .ps {
+        margin-left: 15px;
         sub, p {
-            margin: 0;
+            margin: 0 0 5vh 0;
             padding: 0;
             font-size: 2.25vh;
-        }
-
-        @media (max-width: 400px) {
-            margin: 0 3%;
         }
     }
 
     @media (min-width: 570px) {
         display: flex;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.575);
+        // background-color: rgba(0, 0, 0, 0.575);
+        margin-bottom: 10%;
+        padding: 3% 0 0 0;
     }
 }
