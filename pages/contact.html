@@ -43,38 +43,38 @@
             <h1 class="cta-text">We'd love to hear from you</h1>
         </header>
 
-        <div class="form">
-            <p class="input-header-text">Full Name</p>
+        <form class="form" onsubmit="validate()">
+            <label class="input-header-text">Full Name</label>
             <div class="input-container">
                 <input id="name-input" type="text">
             </div>
 
-            <p class="input-header-text">Email</p>
+            <label class="input-header-text">Email</label>
             <div class="input-container">
                 <input id="email-input" type="email">
             </div>
             
-            <p class="input-header-text">Phone Number</p>
+            <label class="input-header-text">Phone Number</label>
             <div class="input-container">
-                <input id="number-input" type="text" placeholder="(###) ###-###">
+                <input id="number-input" type="text" placeholder="(###) ###-####">
             </div>
 
 
-            <p class="input-header-text">Message</p>
+            <label class="input-header-text">Message</label>
             <div class="input-container">
                 <textarea name="comment-section" id="message-input" cols="30" rows="8" placeholder="Type here..."></textarea>
                 <!-- <input id="message-input" type="text" placeholder="Type here..."> -->
             </div>
             
             <div id="checkbox-wrap">
-                <input type="checkbox" name="" id="sub-box">
+                <input type="checkbox" name="checkbox" id="sub-box">
                 <label for="sub-box">Send me notifications</label>
             </div>
 
             <div class="button-wrap">
-                <button class="submit-btn">Send</button>
+                <input class="submit-btn" type="submit" value="Submit">
             </div>
-        </div>
+        </form>
 
         <div class="ps">
             <sub>Or email us directly.</sub>
