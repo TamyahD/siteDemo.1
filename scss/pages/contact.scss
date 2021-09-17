@@ -9,10 +9,14 @@
     background-color: rgba(0, 0, 0, 0.575);
     width: 100%;
     margin-bottom: 5%;
+    padding: 10px 0 0 0;
+    border-top-left-radius: 15px;
+    clip-path: url(#mobile-svg-path);
 
 
     .heading-text {
         // background-color: orange;
+        z-index: -3;
         margin-left: 3%;
         h3 {
             margin-top: 0;
@@ -24,6 +28,7 @@
         .cta-text {
             margin-bottom: 5vh;
             font-size: 26px;
+            width: 65%;
 
             @media (min-width: 525px) {
                 font-size: 5.7vh;
@@ -39,30 +44,44 @@
         }
         @media (min-width: 570px) {
             line-height: .3;
+            margin-bottom: 40px;
         }
+    }
+    .error {
+        font-size: 2vh;
+        color: c.$red;
+        margin-left: 3%;
     }
     .form {
         margin-bottom: 30px;
-        .input-header-text {
-            margin: 0 0 1% 7%;
-            font-size: 16px;
 
-            // input field heading text
-            // font size set to 20px when screen width >= 500px
-            @media (min-width: 500px) {
-                font-size: 20px;
-            }
-            // padding L/R increases when screen width >= 500px
-            @media (min-width: 525px) {
-                padding: 0 8%;
-            }
-            @media (min-width: 570px) {
-                display: flex;
-                flex-wrap: nowrap;
-                padding: 0 0;
-                position: relative;
-                bottom: 0;
-                max-width: fit-content;
+        #input-label-container {
+            display: flex;
+            .input-label-text {
+                margin: 0 0 1% 10%;
+                font-size: 16px;
+
+                // input field heading text
+                // font size set to 20px when screen width >= 500px
+                @media (min-width: 500px) {
+                    font-size: 20px;
+                }
+                // padding L/R increases when screen width >= 500px
+                @media (min-width: 525px) {
+                    padding: 0 8%;
+                }
+                @media (min-width: 570px) {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    padding: 0 0;
+                    position: relative;
+                    bottom: 0;
+                    max-width: fit-content;
+                }
+
+                .requirement-icon {
+                    font-size: 12px;
+                }
             }
         }
         .input-container {
@@ -72,7 +91,7 @@
             
             input {
                 width: 85%;
-                height: 50px;
+                height: 40px;
                 margin-bottom: 25px;
                 border-radius: 10px;
             
@@ -85,6 +104,7 @@
                 }
                 @media (min-width: 570px) {
                     position: sticky;
+                    height: 55px;
                 }
             
             }
@@ -144,5 +164,7 @@
         // background-color: rgba(0, 0, 0, 0.575);
         margin-bottom: 10%;
         padding: 3% 0 0 0;
+        clip-path: url(#svg-path);
+
     }
 }

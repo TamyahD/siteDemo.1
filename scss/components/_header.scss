@@ -57,6 +57,7 @@
     }
     // container for entire navigation menu
     .nav-container {
+        z-index: 5;
         display: flex;
         flex: .3 0 20%;
 

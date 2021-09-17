@@ -37,30 +37,59 @@
     </header>
     <!---------------------------------------------->
 
+    <svg width="0" height="0">
+        <defs>
+            <clipPath clipPathUnits="objectBoundingBox" id="svg-path">
+                <path d="M638,854h0.558c0.093,0,0,.178.167,0.046a0.066,0.066,0,0,1,.109.039c0.005,0.032-.055.028-0.025,0.079,0.011,0.017.086,0.049,0.072-.009-0.008-.035.119-0.024,0.119-0.024V855h-1v-1Z" transform="translate(-638 -854)"/>
+            </clipPath>
+            <clipPath clipPathUnits="objectBoundingBox" id="mobile-svg-path">
+                <path d="M638,854h0.647c0.094,0-.058.117,0.132,0.046a0.24,0.24,0,0,1,.177.026c0.1,0.066-.177.041-0.147,0.092,0.011,0.017.086,0.049,0.072-.009-0.008-.035.119-0.024,0.119-0.024V855h-1v-1Z" transform="translate(-638 -854)"/>
+            </clipPath>
+
+        </defs>
+      </svg>
+
+
+
+      
     <main class="contact-main">
         <header class="heading-text">
             <h3>Talk to us :)</h3>
             <h1 class="cta-text">We'd love to hear from you</h1>
         </header>
 
-        <form class="form" onsubmit="validate()">
-            <label class="input-header-text">Full Name</label>
+        <!-- <div id="error"></div> -->
+        <form id="form" class="form">
+            <div id="input-label-container">
+                <label class="input-label-text">Full Name <span class="requirement-icon">*</span></label>
+                <div class="error" id="name-error"></div>
+            </div>
             <div class="input-container">
                 <input id="name-input" type="text">
             </div>
 
-            <label class="input-header-text">Email</label>
+
+            <div id="input-label-container">
+                <label class="input-label-text">Email <span class="requirement-icon">*</span></label>
+                <div class="error" id="email-error"></div>
+            </div>
             <div class="input-container">
                 <input id="email-input" type="email">
             </div>
-            
-            <label class="input-header-text">Phone Number</label>
+
+            <div id="input-label-container">
+                <label class="input-label-text">Phone Number</label>
+                <div class="error" id="email-error"></div>
+            </div>
             <div class="input-container">
                 <input id="number-input" type="text" placeholder="(###) ###-####">
             </div>
 
 
-            <label class="input-header-text">Message</label>
+            <div id="input-label-container">
+                <label class="input-label-text">Message <span class="requirement-icon">*</span></label>
+                <div class="error" id="message-error"></div>
+            </div>
             <div class="input-container">
                 <textarea name="comment-section" id="message-input" cols="30" rows="8" placeholder="Type here..."></textarea>
                 <!-- <input id="message-input" type="text" placeholder="Type here..."> -->
@@ -128,4 +157,5 @@
     </footer>
 </body>
 <script src="../assets/javascript/mobile_menu.js"></script>
+<script src="../assets/javascript/validation.js"></script>
 </html>

@@ -43,6 +43,7 @@
   }
 }
 .header .nav-container {
+  z-index: 5;
   display: flex;
   flex: 0.3 0 20%;
 }
@@ -530,8 +531,12 @@ body .subscribe-content .sub-input-box {
   background-color: rgba(0, 0, 0, 0.575);
   width: 100%;
   margin-bottom: 5%;
+  padding: 10px 0 0 0;
+  border-top-left-radius: 15px;
+  clip-path: url(#mobile-svg-path);
 }
 .contact-main .heading-text {
+  z-index: -3;
   margin-left: 3%;
 }
 .contact-main .heading-text h3 {
@@ -545,6 +550,7 @@ body .subscribe-content .sub-input-box {
 .contact-main .heading-text .cta-text {
   margin-bottom: 5vh;
   font-size: 26px;
+  width: 65%;
 }
 @media (min-width: 525px) {
   .contact-main .heading-text .cta-text {
@@ -561,27 +567,36 @@ body .subscribe-content .sub-input-box {
 @media (min-width: 570px) {
   .contact-main .heading-text {
     line-height: 0.3;
+    margin-bottom: 40px;
   }
+}
+.contact-main .error {
+  font-size: 2vh;
+  color: #CF1919;
+  margin-left: 3%;
 }
 .contact-main .form {
   margin-bottom: 30px;
 }
-.contact-main .form .input-header-text {
-  margin: 0 0 1% 7%;
+.contact-main .form #input-label-container {
+  display: flex;
+}
+.contact-main .form #input-label-container .input-label-text {
+  margin: 0 0 1% 10%;
   font-size: 16px;
 }
 @media (min-width: 500px) {
-  .contact-main .form .input-header-text {
+  .contact-main .form #input-label-container .input-label-text {
     font-size: 20px;
   }
 }
 @media (min-width: 525px) {
-  .contact-main .form .input-header-text {
+  .contact-main .form #input-label-container .input-label-text {
     padding: 0 8%;
   }
 }
 @media (min-width: 570px) {
-  .contact-main .form .input-header-text {
+  .contact-main .form #input-label-container .input-label-text {
     display: flex;
     flex-wrap: nowrap;
     padding: 0 0;
@@ -590,13 +605,16 @@ body .subscribe-content .sub-input-box {
     max-width: fit-content;
   }
 }
+.contact-main .form #input-label-container .input-label-text .requirement-icon {
+  font-size: 12px;
+}
 .contact-main .form .input-container {
   display: flex;
   justify-content: center;
 }
 .contact-main .form .input-container input {
   width: 85%;
-  height: 50px;
+  height: 40px;
   margin-bottom: 25px;
   border-radius: 10px;
 }
@@ -609,6 +627,7 @@ body .subscribe-content .sub-input-box {
 @media (min-width: 570px) {
   .contact-main .form .input-container input {
     position: sticky;
+    height: 55px;
   }
 }
 .contact-main .form .input-container #message-input {
@@ -660,6 +679,7 @@ body .subscribe-content .sub-input-box {
     align-items: center;
     margin-bottom: 10%;
     padding: 3% 0 0 0;
+    clip-path: url(#svg-path);
   }
 }
 
