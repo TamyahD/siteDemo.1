@@ -18,7 +18,8 @@
           background: v.$bg-img;
           background-attachment: fixed;
           background-size: cover;
-
+          min-width: fit-content;
+          
           // create overlay effect
           &:after {
               content: '';
