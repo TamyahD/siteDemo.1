@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 .header {
   margin-bottom: 5.5vh;
   display: flex;
@@ -723,7 +723,7 @@ html {
  */
 body {
   margin: 0 0;
-  font-family: "Chelsea Market", cursive;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 /**
@@ -757,7 +757,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: "Chelsea Market", cursive;
+  font-family: "Josefin Sans", sans-serif;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -800,7 +800,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: "Chelsea Market", cursive;
+  font-family: "Josefin Sans", sans-serif;
   /* 1 */
 }
 
