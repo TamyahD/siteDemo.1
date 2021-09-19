@@ -1,4 +1,4 @@
-// target phrase icons
+// target phrase number icons
 const phraseElements = document.querySelectorAll(".phraseIcon");
 const ch = "<span>CodeHearted</span>";
 
@@ -17,11 +17,12 @@ phraseElements.forEach((el) => {
         /* chooses exclusive h3 element
         refers to class list in styling
         adds chosen styles */
-        document.querySelector('.sm-heading').classList.add('.sm-heading');
+        // document.querySelector('.sm-heading').classList.add('.sm-heading');
 
         if (el.innerHTML.match("01")) {
             document.querySelector('h3').innerHTML = "<h3 class='sm-heading'>"+catchphrases[0]+ch+"!</h3>";
             document.querySelector('#icon1').style.color = "gold";
+            document.querySelector('#phrase-text').classList.toggle('style-phrase');
 
             // changes non-selected
             // icons to default styles

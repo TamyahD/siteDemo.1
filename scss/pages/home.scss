@@ -11,15 +11,24 @@ body {
     .main-content {
         @include mx.flex-column;
         align-items: center;
+        height: 30em;
+        padding: 3.75em 2em 0 2em;
 
         h3 {
             margin: 0;
             font-weight: 500;
-            &.sm-heading {
-                min-height: 20vh;
+            &#phrase-text {
+                min-height: fit-content;
+                // max-width: 83%;
+                padding: .25em 0 .55em 0;
                 font-size: 4.5vh;
                 text-align: center;
                 color: c.$white;
+                // background-color: orangered;
+
+                &.style-phrase {
+                    color: black;
+                }
 
                 & span {
                     font-variant: small-caps;
