@@ -1,10 +1,10 @@
-// target phrase icons
+// target phrase number icons
 const phraseElements = document.querySelectorAll(".phraseIcon");
-const ch = "<span>CodeHearted</span>";
+const ch = "<span>CodeTrip</span>";
 
 const icon = document.querySelector('h3');
 // create array with catchphrases
-const catchphrases = ["Live It - ", " Online & in Real Life", "Don't You Love Being "];
+const catchphrases = ["Let's Go - ", " Online & in Real Life", " Away to Happiness"];
 
 // target catchphrase element by classname
 // change catch phrase function takes in event(e) parameter
@@ -17,11 +17,12 @@ phraseElements.forEach((el) => {
         /* chooses exclusive h3 element
         refers to class list in styling
         adds chosen styles */
-        document.querySelector('.sm-heading').classList.add('.sm-heading');
+        // document.querySelector('.sm-heading').classList.add('.sm-heading');
 
         if (el.innerHTML.match("01")) {
-            document.querySelector('h3').innerHTML = "<h3 class='sm-heading'>"+catchphrases[0]+ch+"!</h3>";
+            document.querySelector('h3').innerHTML = "<h3 class='sm-heading'>"+catchphrases[0]+"<br>"+ch+"!</h3>";
             document.querySelector('#icon1').style.color = "gold";
+            // document.querySelector('#phrase-text').classList.toggle('style-phrase'); //TEST
 
             // changes non-selected
             // icons to default styles
@@ -30,14 +31,14 @@ phraseElements.forEach((el) => {
             document.querySelector('#icon3').style.color = "lightgray";
         }
         else if (el.innerHTML.match("02")) {
-            document.querySelector('h3').innerHTML = "<h3 class='sm-heading'>"+ch+catchphrases[1]+"</h3>";
+            document.querySelector('h3').innerHTML = "<h3 class='sm-heading'>"+ch+"<br>"+catchphrases[1]+"</h3>";
             document.querySelector('#icon2').style.color = "gold";
 
             document.querySelector('#icon1').style.color = 'lightgray';
             document.querySelector('#icon3').style.color = 'lightgray';
         }
         else {
-            document.querySelector('h3').innerHTML = "<h3 class='sm-heading'>"+catchphrases[2]+ch+"?</h3>";
+            document.querySelector('h3').innerHTML = "<h3 class='sm-heading'>The "+ch+"<br>"+catchphrases[2]+"</h3>";
             document.querySelector('#icon3').style.color = "gold";
   
             document.querySelector('#icon1').style.color = 'lightgray';

@@ -4,51 +4,37 @@
 // APPLY MIXINS
 
 
-// // set background image
-// @mixin background {
-//     @if (v.$bg-img) {
-//         &#bg-img {
-//             background: v.$bg-img;
-//             background-attachment: fixed;
-//             background-size: cover;
 
-//             // create overlay effect
-//             &:after {
-//                 content: '';
-//                 position: absolute;
-//                 top: 0;
-//                 right: 0;
-//                 size: cover;
-//                 width: 100%;
-//                 height: 100%;
-//                 z-index: -1; //higher the number, the closer element is to front
-//                 // overlay color
-//                 background: rgba($color: c.$blue, $alpha: .3);
-//             }
-//         }
-//     }
-// }
-// * {
-//     @include background();
-// }
 body {
     background-color: darken($color: c.$drkgray, $amount: 20);
     min-height: 100vh;
     .main-content {
         @include mx.flex-column;
         align-items: center;
+        height: 30em;
+        padding: 3.75em 1em 0 1em;
 
+        // phrase heading text
         h3 {
             margin: 0;
-            font-weight: 500;
-            &.sm-heading {
-                min-height: 20vh;
-                font-size: 4.5vh;
+            font-size: 4.25vh;
+            // font-weight: 500;
+            // color: c.$red;
+            &#phrase-text {
+                min-height: fit-content;
+                height: 4em;
+                padding: .25em 0 .55em 0;
+                font-size: 4.25vh;
                 text-align: center;
                 color: c.$white;
 
+                &.style-phrase {
+                    color: black;
+                }
+
                 & span {
                     font-variant: small-caps;
+                    // font-weight: 500;
                     font-size:7vh;
                     margin: 0;
                     padding: 0;
