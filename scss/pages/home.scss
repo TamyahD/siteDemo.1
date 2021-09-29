@@ -14,18 +14,19 @@ body {
         height: 30em;
         padding: 3.75em 1em 0 1em;
 
+        // phrase heading text
         h3 {
             margin: 0;
-            font-weight: 500;
+            font-size: 4.25vh;
+            // font-weight: 500;
+            // color: c.$red;
             &#phrase-text {
                 min-height: fit-content;
                 height: 4em;
-                // max-width: 83%;
                 padding: .25em 0 .55em 0;
                 font-size: 4.25vh;
                 text-align: center;
                 color: c.$white;
-                // background-color: orangered;
 
                 &.style-phrase {
                     color: black;

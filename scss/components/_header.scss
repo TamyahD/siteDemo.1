@@ -1,8 +1,8 @@
 @use '../globals/colors' as c;
 @use '../globals/variables' as v;
 
+// entire header container
 .header {
-    // entire header container
     margin-bottom: 5.5vh; //maybe change
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,9 @@
     min-height: 50px;
     // position relative so children elements
     // can reference for positioning
-    position: relative; //fixed
+    position: relative; // or fixed
+
+    // header displays color when menu icon clicked
     &.show {
         background-color: black;
     }
@@ -51,7 +53,13 @@
 
             // logo text exclusive restyles for smaller devices
             @media (max-width: 570px) {
-                font-size: 33px;
+                font-size: 30px;
+            }
+
+            .logo-icon {
+                padding: 0;
+                margin: 0;
+                height: 35px;
             }
         }
     }
