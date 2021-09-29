@@ -20,54 +20,83 @@
         background-color: black;
     }
 
-    // default logo
+    // default logo container
     .logo {
+        // background-color: grey;
         display: flex;
         align-items: center;
+        // font color for elements inside container
         color: c.$white;
         text-decoration: none;
         max-height: 75px;
         min-height: 50px;
-        margin-left: 20px;
+        margin-left: 7px;
+        margin-top: 10px;
         max-width: 75%;
+        min-width: max-content;
         // grow [] size of available space
         // shrinks [] size of available space
         // base size is [] of container
         // growth/shrink is off base size
-        flex: .5 2 23%;
+        flex: 1 1.5 20%;
         font-variant: small-caps;
         cursor: default;
 
-        // logo exclusive restyles for smaller devices
+        // logo container restyles exclusive for smaller devices
         // 0-570px
-        @media (max-width: 570px) {
-            // APPLY SHOW FOR PROPORTIONAL STYLES ON MOBILE
-            display: flex;
-            flex: 1.5 1 30%;
-            margin-left: 1.25vh;
-        }
+        // @media (max-width: 570px) {
+        //     // APPLY SHOW FOR PROPORTIONAL STYLES ON MOBILE
+        //     display: flex;
+        //     background-color: deepskyblue;
+        //     // flex: 1.5 1 30%;
+        //     margin-left: 7px;
+        // }
+
         // default logo text
         .brand-text {
+            // background-color: darken($color: grey, $amount: 20);
             cursor: pointer;
-            font-size: 50px;
+            font-size: 10vw;
+            width: 90%;
+            height: 65px;
+            display: flex;
+            align-items: center;
 
-            // logo text exclusive restyles for smaller devices
-            @media (max-width: 570px) {
-                font-size: 30px;
+
+            // logo text exclusive restyles for larger devices
+            @media (min-width: 475px) {
+                font-size: 50px;
+                margin-left: 15px;
+            }
+            @media (min-width: 900px) {
+                // background-color: dodgerblue;
+                font-size: 75px;
+                display: flex;
+                align-items: center;
+                padding-top: 5px;
+                height: fit-content;
             }
 
+            // default logo icon
             .logo-icon {
                 padding: 0;
-                margin: 0;
-                height: 35px;
+                margin: 0 12px 0 0;
+                width: 35px;
+                max-width: fit-content;
             }
         }
     }
-    // container for entire navigation menu
+    // default container for desktop navigation menu
     .nav-container {
+        // background-color: darkcyan;
         z-index: 5;
         display: flex;
-        flex: .3 0 20%;
+        margin-right: 15px;
+        justify-content: center;
+        flex: .8 .5 12%;
+        width: 500px;
+        max-width: 600px;
+
 
         // smaller devices makes default nav menu
         // disappear & mobile menu icon appears
@@ -75,8 +104,7 @@
             & {
                 display: none;
             }
-            // show styles triggered when mobile menu
-            // icon displayed & clicked
+            // show styles triggered when mobile menu icon clicked
             &.show {
                 display: flex;
                 width: 100%;
@@ -92,6 +120,7 @@
                     width: 100%;
                     text-align: center;
                     margin: 0;
+                    // mobile nav menu lines
                     .nav-item {
                         padding: 3.5vh 0;
                         border-bottom: 1.5px solid saturate($color: c.$gold, $amount: 15);
@@ -105,20 +134,36 @@
         }
         // default/desktop styles of navigation
         .nav-menu {
+            // background-color:darkslategray;
             list-style: none;
             margin: 7px 0;
-            padding: 0 0; //removes list indent
+            padding: 0 5px; //removes list indent
             display: flex;
-            justify-content: space-around;
-            flex: 1.25 .5 15%;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            height: 100%;
+            flex: 1 .5 20%;            
+
+            // default for nav items 
             .nav-item {
-                display: flex;
-                margin: 0 18px;
+                // display: flex;
+                // margin: 0 20px;
                 flex: 0 0 auto;
                 font-size: 25px;
+                align-items: center;
+
+                // default for nav item links
                 a {
                     color: c.$white;
                     text-decoration: none;
+
+
+
+                    @media (min-width: 770px) {
+                        font-size: 30px;
+                        // color: deeppink;
+                    }
                 }
             }
         }
@@ -152,7 +197,7 @@
             align-self: flex-end;
         }
 
-        @media (min-width:571px ) {
+        @media (min-width:570px ) {
             & {
                 display: none;
             }
